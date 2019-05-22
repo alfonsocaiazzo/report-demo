@@ -30,7 +30,7 @@ url: YOUR URL              # the base hostname & protocol for your site, e.g. ht
 # Jupyter Book settings
 
 # Notebook content settings
-use_hide_code_button: true        # If True, a small button appears to the right of each cell that lets you hide its contents.
+use_hide_code_button: false        # If True, a small button appears to the right of each cell that lets you hide its contents.
 
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
