@@ -12,6 +12,8 @@ next_page:
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
+# Servicios
+
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
@@ -53,7 +55,7 @@ sunrise.tier_plots(HH,'E_Services')
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/e-services_3_0.png)
+![png](images/e-services_4_0.png)
 
 </div>
 </div>
@@ -61,7 +63,7 @@ sunrise.tier_plots(HH,'E_Services')
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/e-services_3_1.png)
+![png](images/e-services_4_1.png)
 
 </div>
 </div>
@@ -69,4 +71,4 @@ sunrise.tier_plots(HH,'E_Services')
 
 ### Hay una correlaci\'on entre el nivel de suministro de electricidad y los ingresos mensuales
 
-En el quintil más bajo de ingresos se observan aún hogares clasificados en niveles superiores (3). Por otro lado, en los quintiles más altos, 4 y 5 todavía se encuentran hogares en los niveles m\'as bajos, 0. A diferencia de lo esperado, sobre el 50\% de los hogares en el cuarto quintil, est´n en el nivel 1 de suministro de electricidad.
+En el quintil más bajo de ingresos se observan aún hogares clasificados en niveles superiores (3). Por otro lado, en los quintiles más altos, 4 y 5 todavía se encuentran hogares en los niveles más bajos, 0. A diferencia de lo esperado, sobre el 50% de los hogares en el cuarto quintil, están en el nivel 1 de suministro de electricidad.
