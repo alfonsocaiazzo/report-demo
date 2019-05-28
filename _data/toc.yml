@@ -23,21 +23,84 @@
 
 # Top-level page
 
-- title: Context
-  url: /hedera
-  not_numbered: true
-
-
-# External link
-- title: GitHub repository
-  url: https://github.com/jupyter/jupyter-book
-  external: true
-  not_numbered: true
-
 # Adds a searchbar link
-- title: Search
+- title: Buscar
   search: true
 
 # Divider for meta-pages and content page
 - divider: true
+
+- title: Contexto
+  url: /hedera
+  not_numbered: false
+  expand_sections: true
+  sections:
+  - title: El enfoque multinivel (Multi-tier Framework)
+    url: /mtf
+    not_numbered: true
+  - title: Metodología de piloto
+    url: /methodology
+    not_numbered: true
+  - title: Herramienta para recollección de datos
+    url: /hedera-collect
+    not_numbered: true
+
+- title: Acceso a Electricidad
+  url: /electricity
+  not_numbered: false
+  expand_sections: true
+  sections:
+  - title: Servicios
+    url: /e-services
+    not_numbered: true
+  - title: Capacidad
+    url: /e-affordability
+    not_numbered: true
+  - title: Asequibilidad
+    url: /e-affordability
+    not_numbered: true
+  - title: Legalidad
+    url: /e-affordability
+    not_numbered: true
+  - title: Confiabilidad
+    url: /e-affordability
+    not_numbered: true
+  - title: Disponibilidad
+    url: /e-affordability
+    not_numbered: true
+  - title: Calidad
+    url: /e-affordability
+    not_numbered: true
+  - title: Salud y Seguridad
+    url: /e-affordability
+    not_numbered: true
+
+- title: Cocción
+  url: /cooking
+  not_numbered: false
+  expand_sections: true
+  sections:
+  - title: Asequibilidad
+    url: /e-access
+    not_numbered: true
+  - title: Conveniencia
+    url: /e-access
+    not_numbered: true
+  - title: Disponibilidad
+    url: /e-access
+    not_numbered: true
+
+- title: Conclusiones
+  url: /cooking
+  not_numbered: false
+  
+
+
+# External link
+- title: HEDERA 
+  url: http://hedera.online
+  external: true
+  not_numbered: true
+
+
 

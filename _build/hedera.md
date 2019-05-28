@@ -2,13 +2,13 @@
 interact_link: content/hedera.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Context'
+title: 'Contexto'
 prev_page:
   url: 
   title: ''
 next_page:
-  url: https://github.com/jupyter/jupyter-book
-  title: 'GitHub repository'
+  url: /mtf
+  title: 'El enfoque multinivel (Multi-tier Framework)'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
@@ -162,6 +162,7 @@ sector de inversión de impacto de una manera eficiente y económica.</p>
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
+# NO CODE
 import os,sys
 
 '''
@@ -170,7 +171,7 @@ However, the path shall be set correctly.
 '''
 # add the path to HIT
 here = os.path.abspath('')
-sys.path.insert(0, os.path.normpath(os.path.join(here, '../../Dasboard/src')))
+sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src')))
 
 # import HIT libraries
 import hedera_types as hedera
@@ -179,13 +180,13 @@ import tiers as mtf
 
 # create the demo institution
 sunrise = hedera.mfi(1)
-odk_data_dir = '../../Dasboard/_datasets/DataODK/'
+odk_data_dir = '../../_datasets/DataODK/'
 
 odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/']
 odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv',
                  odk_data_dir + odk_survey_folder[1] + 
                  'PEPI_FONDESURCO_2_results.csv']
-sunrise.gpsFile = '../../Dasboard/_datasets/Demo/GPS.csv'
+sunrise.gpsFile = '../../_datasets/Demo/GPS.csv'
 
 # read database
 data_demo = sunrise.read_survey(odk_data_name)

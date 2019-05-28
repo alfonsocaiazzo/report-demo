@@ -8,15 +8,15 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Books with Jupyter and Jekyll</title>
-  <meta name="description" content="This is a first test with Jupyter-book">
+  <meta name="description" content="Reporte de Acceso a Energía, Proyecto Piloto 2019">
 
   <link rel="canonical" href="http://0.0.0.0:4000//content/intro.html">
-  <link rel="alternate" type="application/rss+xml" title="DEMO REPORT" href="http://0.0.0.0:4000//feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Reporte de Acceso a Energía" href="http://0.0.0.0:4000//feed.xml">
 
   <meta property="og:url"         content="http://0.0.0.0:4000//content/intro.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Books with Jupyter and Jekyll" />
-<meta property="og:description" content="This is a first test with Jupyter-book" />
+<meta property="og:description" content="Reporte de Acceso a Energía, Proyecto Piloto 2019" />
 <meta property="og:image"       content="" />
 
 
@@ -29,14 +29,14 @@
   "headline":
     "Books with Jupyter and Jekyll",
   "datePublished":
-    "2019-05-22T15:38:18-05:00",
+    "2019-05-28T03:04:48-05:00",
   "dateModified":
-    "2019-05-22T15:38:18-05:00",
+    "2019-05-28T03:04:48-05:00",
   "description":
-    "This is a first test with Jupyter-book",
+    "Reporte de Acceso a Energía, Proyecto Piloto 2019",
   "author": {
     "@type": "Person",
-    "name": "ALFONSO CAIAZZO"
+    "name": "HEDERA"
   },
   "publisher": {
     "@type": "Organization",
@@ -143,134 +143,6 @@ initFunction(function () {
 
   <!-- Load Thebelab for interactive widgets -->
   <!-- Include Thebelab for interactive code if it's enabled -->
-
-
-<!-- Display Thebelab button in each code cell -->
-<script>
-/**
- * Set up thebelab button for code blocks
- */
-
-const thebelabCellButton = id =>
-  `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
-    <img src="/assets/images/edit-button.svg" alt="Start interactive mode">
-  </a>`
-
-
-const addThebelabButtonToCodeCells =  () => {
-
-  const codeCells = document.querySelectorAll('div.input_area > div.highlighter-rouge:not(.output) pre')
-  codeCells.forEach((codeCell, index) => {
-    const id = codeCellId(index)
-    codeCell.setAttribute('id', id)
-    if (document.getElementById("thebelab-cell-button-" + id) == null) {
-      codeCell.insertAdjacentHTML('afterend', thebelabCellButton(id));
-    }
-  })
-}
-
-initFunction(addThebelabButtonToCodeCells);
-</script>
-
-
-
-<script type="text/x-thebe-config">
-    {
-      requestKernel: true,
-      binderOptions: {
-        repo: 'YOUR-ORG/YOUR-REPO',
-        ref: 'gh-pages',
-      },
-      codeMirrorConfig: {
-        theme: "abcdef"
-      },
-      kernelOptions: {
-        name: 'python3',
-      }
-    }
-</script>
-<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js"></script>
-<script>
-    /**
-     * Add attributes to Thebelab blocks
-     */
-
-    const initThebelab = () => {
-        const addThebelabToCodeCells = () => {
-            console.log("Adding thebelab to code cells...");
-            // If Thebelab hasn't loaded, wait a bit and try again. This
-            // happens because we load ClipboardJS asynchronously.
-            if (window.thebelab === undefined) {
-                setTimeout(addThebelabToCodeCells, 250)
-            return
-            }
-
-            // If we already detect a Thebelab cell, don't re-run
-            if (document.querySelectorAll('div.thebelab-cell').length > 0) {
-                return;
-            }
-
-            // Find all code cells, replace with Thebelab interactive code cells
-            const codeCells = document.querySelectorAll('.input_area pre')
-            codeCells.forEach((codeCell, index) => {
-                const id = codeCellId(index)
-                codeCell.setAttribute('data-executable', 'true')
-
-                // Figure out the language it uses and add this too
-                var parentDiv = codeCell.parentElement.parentElement;
-                var arrayLength = parentDiv.classList.length;
-                for (var ii = 0; ii < arrayLength; ii++) {
-                    var parts = parentDiv.classList[ii].split('language-');
-                    if (parts.length === 2) {
-                        // If found, assign dataLanguage and break the loop
-                        var dataLanguage = parts[1];
-                        break;
-                    }
-                }
-                codeCell.setAttribute('data-language', dataLanguage)
-
-                // If the code cell is hidden, show it
-                var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
-                if (inputCheckbox !== null) {
-                    setCodeCellVisibility(inputCheckbox, 'visible');
-                }
-            });
-
-            // Remove the event listener from the page so keyboard press doesn't
-            // Change page
-            document.removeEventListener('keydown', initPageNav)
-            keyboardListener = false;
-
-            // Init thebelab
-            thebelab.bootstrap();
-
-            // Remove copy buttons since they won't work anymore
-            const copyAndThebeButtons = document.querySelectorAll('.copybtn, .thebebtn')
-            copyAndThebeButtons.forEach((button, index) => {
-                button.remove();
-            });
-
-            // Remove outputs since they'll be stale
-            const outputs = document.querySelectorAll('.output *, .output')
-            outputs.forEach((output, index) => {
-                output.remove();
-            });
-        }
-
-        // Add event listener for the function to modify code cells
-        const thebelabButtons = document.querySelectorAll('[id^=thebelab], [id$=thebelab]')
-        thebelabButtons.forEach((thebelabButton,index) => {
-            if (thebelabButton === null) {
-                setTimeout(initThebelab, 250)
-                return
-            };
-            thebelabButton.addEventListener('click', addThebelabToCodeCells);
-        });
-    }
-
-    // Initialize Thebelab
-    initFunction(initThebelab);
-</script>
 
 
 
@@ -555,10 +427,18 @@ initFunction(initQuery);
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="https://jupyter.org/jupyter-book/"><img src="/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
-  <h2 class="c-sidebar__title">DEMO REPORT</h2>
+  <a href="http://hedera.online/"><img src="/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">Reporte de Acceso a Energía</h2>
   <ul class="c-sidebar__chapters">
     
+      
+      
+        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/search.html">Buscar</a></li>
+        
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
       
       
 
@@ -572,7 +452,352 @@ initFunction(initQuery);
           href="/hedera.html"
         >
           
-          Context
+            1.
+          
+          Contexto
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/mtf.html"
+                >
+                  
+                  El enfoque multinivel (Multi-tier Framework)
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/methodology.html"
+                >
+                  
+                  Metodología de piloto
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/hedera-collect.html"
+                >
+                  
+                  Herramienta para recollección de datos
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/electricity.html"
+        >
+          
+            2.
+          
+          Acceso a Electricidad
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-services.html"
+                >
+                  
+                  Servicios
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Capacidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Asequibilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Legalidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Confiabilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Disponibilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Calidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Salud y Seguridad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cooking.html"
+        >
+          
+            3.
+          
+          Cocción
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-access.html"
+                >
+                  
+                  Asequibilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-access.html"
+                >
+                  
+                  Conveniencia
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-access.html"
+                >
+                  
+                  Disponibilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cooking.html"
+        >
+          
+            4.
+          
+          Conclusiones
         </a>
 
         
@@ -590,10 +815,10 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="https://github.com/jupyter/jupyter-book"
+          href="http://hedera.online"
         >
           
-          GitHub repository
+          HEDERA
         </a>
 
         
@@ -601,22 +826,14 @@ initFunction(initQuery);
 
       
     
-      
-      
-        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/search.html">Search</a></li>
-        
-      
-      
-        <li class="c-sidebar__divider"></li>
-        
   </ul>
-  <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a></p>
+  <p class="sidebar_footer"></p>
 </nav>
 
       
       <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
       <aside class="sidebar__right">
-          <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
+          <header><h4 class="nav__title"><i class="fa fa-list"></i>   En esa página</h4></header>
           <nav class="onthispage">
           </nav>
       </aside>
