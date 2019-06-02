@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>El enfoque multinivel (Multi-tier Framework)</title>
+  <meta name="description" content="Reporte de Acceso a Energía, Proyecto Piloto 2019">
+
+  <link rel="canonical" href="http://0.0.0.0:4000//content/mtf.html">
+  <link rel="alternate" type="application/rss+xml" title="Reporte de Acceso a Energía" href="http://0.0.0.0:4000//feed.xml">
+
+  <meta property="og:url"         content="http://0.0.0.0:4000//content/mtf.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="El enfoque multinivel (Multi-tier Framework)" />
+<meta property="og:description" content="Reporte de Acceso a Energía, Proyecto Piloto 2019" />
+<meta property="og:image"       content="" />
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":
+    "http://0.0.0.0:4000//content/mtf.html",
+  "headline":
+    "El enfoque multinivel (Multi-tier Framework)",
+  "datePublished":
+    "2019-06-02T00:12:19-05:00",
+  "dateModified":
+    "2019-06-02T00:12:19-05:00",
+  "description":
+    "Reporte de Acceso a Energía, Proyecto Piloto 2019",
+  "author": {
+    "@type": "Person",
+    "name": "HEDERA"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://0.0.0.0:4000/",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://0.0.0.0:4000/",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    CommonHTML: {
+        linebreaks: {
+            automatic: true,
+        },
+    },
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+
+  <!-- DOM updating function -->
+  <script>
+const runWhenDOMLoaded = cb => {
+  if (document.readyState != 'loading') {
+    cb()
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', cb)
+  } else {
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState == 'complete') cb()
+    })
+  }
+}
+
+// Helper function to init things quickly
+initFunction = function(myfunc) {
+  runWhenDOMLoaded(myfunc);
+  document.addEventListener('turbolinks:load', myfunc);
+};
+</script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="/assets/js/anchor.min.js"  type="text/javascript"></script>
+  <script>
+
+initFunction(function () {
+    anchors.add("main h1, main h2, main h3, main h4")
+});
+
+</script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="/assets/js/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+
+  <!-- Load the auto-generating TOC -->
+  <script src="/assets/js/tocbot.min.js"  type="text/javascript"></script>
+  <script>
+var initToc = function () {
+  tocbot.init({
+    tocSelector: 'nav.onthispage',
+    contentSelector: '.c-textbook__content',
+    headingSelector: 'h2, h3',
+    orderedList: false,
+    collapseDepth: 6,
+    listClass: 'toc__menu',
+    activeListItemClass: "",  // Not using
+    activeLinkClass: "", // Not using
+  });
+  tocbot.refresh();
+}
+initFunction(initToc);
+</script>
+
+  <!-- Google analytics -->
+  <script src="/assets/js/ga.js" async></script>
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
+
+  <!-- Load JS that depends on site variables -->
+  <script>
+/**
+ * Set up copy/paste for code blocks
+ */
+const codeCellId = index => `codecell${index}`
+
+const clipboardButton = id =>
+  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
+    <img src="/assets/images/copy-button.svg" alt="Copy to clipboard">
+  </a>`
+
+// Clears selected text since ClipboardJS will select the text when copying
+const clearSelection = () => {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges()
+  } else if (document.selection) {
+    document.selection.empty()
+  }
+}
+
+// Changes tooltip text for two seconds, then changes it back
+const temporarilyChangeTooltip = (el, newText) => {
+  const oldText = el.getAttribute('data-tooltip')
+  el.setAttribute('data-tooltip', newText)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
+}
+
+const addCopyButtonToCodeCells = () => {
+  // If ClipboardJS hasn't loaded, wait a bit and try again. This
+  // happens because we load ClipboardJS asynchronously.
+  if (window.ClipboardJS === undefined) {
+    setTimeout(addCopyButtonToCodeCells, 250)
+    return
+  }
+
+  const codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.getElementById("copy-button" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
+    }
+  })
+
+  const clipboard = new ClipboardJS('.copybtn')
+  clipboard.on('success', event => {
+    clearSelection()
+    temporarilyChangeTooltip(event.trigger, 'Copied!')
+  })
+
+  clipboard.on('error', event => {
+    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
+  })
+
+  // Get rid of clipboard before the next page visit to avoid memory leak
+  document.addEventListener('turbolinks:before-visit', () =>
+    clipboard.destroy()
+  )
+}
+
+initFunction(addCopyButtonToCodeCells);
+</script>
+
+
+  <!-- Hide cell code -->
+  
+<script>
+/**
+Add buttons to hide code cells
+*/
+
+
+var setCodeCellVisibility = function(inputField, kind) {
+    // Update the image and class for hidden
+    var id = inputField.getAttribute('data-id');
+    var codeCell = document.querySelector(`#${id} div.highlight`);
+
+    if (kind === "visible") {
+        codeCell.classList.remove('hidden');
+        inputField.checked = true;
+    } else {
+        codeCell.classList.add('hidden');
+        inputField.checked = false;
+    }
+}
+
+var toggleCodeCellVisibility = function (event) {
+    // The label is clicked, and now we decide what to do based on the input field's clicked status
+    if (event.target.tagName === "LABEL") {
+        var inputField = event.target.previousElementSibling;
+    } else {
+        // It is the span inside the target
+        var inputField = event.target.parentElement.previousElementSibling;
+    }
+
+    if (inputField.checked === true) {
+        setCodeCellVisibility(inputField, "visible");
+    } else {
+        setCodeCellVisibility(inputField, "hidden");
+    }
+}
+
+
+// Button constructor
+const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
+
+var addHideButton = function () {
+  // If a hide button is already added, don't add another
+  if (document.querySelector('div.hidecode input') !== null) {
+      return;
+  }
+
+  // Find the input cells and add a hide button
+  document.querySelectorAll('div.input_area').forEach(function (item, index) {
+    if (!item.classList.contains("hidecode")) {
+        // Skip the cell if it doesn't have a hidecode class
+        return;
+    }
+
+    const id = codeCellId(index)
+    item.setAttribute('id', id);
+    // Insert the button just inside the end of the next div
+    item.querySelector('div').insertAdjacentHTML('beforeend', hideCodeButton(id))
+
+    // Set up the visibility toggle
+    hideLink = document.querySelector(`#${id} div.highlight + input + label`);
+    hideLink.addEventListener('click', toggleCodeCellVisibility)
+  });
+}
+
+
+// Initialize the hide buttos
+var initHiddenCells = function () {
+    // Add hide buttons to the cells
+    addHideButton();
+
+    // Toggle the code cells that should be hidden
+    document.querySelectorAll('div.hidecode input').forEach(function (item) {
+        setCodeCellVisibility(item, 'hidden');
+        item.checked = true;
+    })
+}
+
+initFunction(initHiddenCells);
+
+</script>
+
+
+  <!-- Load custom website scripts -->
+  <script src="/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+</head>
+
+  <body>
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="http://hedera.online/"><img src="/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">Reporte de Acceso a Energía</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/search.html">Buscar</a></li>
+        
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/intro.html"
+        >
+          
+            1.
+          
+          Contexto
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/mtf.html"
+                >
+                  
+                  El enfoque multinivel (Multi-tier Framework)
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/methodology.html"
+                >
+                  
+                  Metodología de piloto
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/hedera-collect.html"
+                >
+                  
+                  Herramienta para recollección de datos
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/gps.html"
+        >
+          
+            2.
+          
+          Geolocalización
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/e-access.html"
+        >
+          
+            3.
+          
+          Acceso a Electricidad
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-services.html"
+                >
+                  
+                  Servicios
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Capacidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Asequibilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Legalidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Confiabilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Disponibilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Calidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-affordability.html"
+                >
+                  
+                  Salud y Seguridad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cooking.html"
+        >
+          
+            4.
+          
+          Cocción
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-access.html"
+                >
+                  
+                  Asequibilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-access.html"
+                >
+                  
+                  Conveniencia
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/e-access.html"
+                >
+                  
+                  Disponibilidad
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/cooking.html"
+        >
+          
+            5.
+          
+          Conclusiones
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="http://hedera.online"
+        >
+          
+          HEDERA
+        </a>
+
+        
+      </li>
+
+      
+    
+  </ul>
+  <p class="sidebar_footer"></p>
+</nav>
+
+      
+      <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+      <aside class="sidebar__right">
+          <header><h4 class="nav__title"><i class="fa fa-list"></i>   En esa página</h4></header>
+          <nav class="onthispage">
+          </nav>
+      </aside>
+      
+      <main class="c-textbook__page" tabindex="-1">
+          <div class="o-wrapper">
+            <div class="c-sidebar-toggle">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <button
+    id="js-sidebar-toggle"
+    class="hamburger hamburger--arrowalt is-active"
+  >
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
+  </button>
+</div>
+
+            
+
+            <div class="c-textbook__content">
+              <h1 id="el-enfoque-multinivel-multi-tier-framework">El enfoque multinivel (Multi-tier Framework)</h1>
+
+<h2 id="la-necesidad-de-medir-el-acceso-a-energía">La necesidad de medir el acceso a energía</h2>
+
+<p>El concepto y la medición del acceso a la energía son de suma importancia para los gobiernos y las agencias de desarrollo con el fin de adaptar las políticas y los programas adecuados para alcanzar los objetivos globales. La iniciativa Energía Sostenible para Todos (SE4All) lanzada por el Secretario General de las Naciones Unidas en 2011 tiene como objetivo lograr el acceso universal a los servicios modernos de energía para 2030. El Objetivo de Desarrollo Sostenible (ODS) número 7, adoptado en 2015 por todas las naciones, tiene como meta: garantizar el acceso a una energía asequible, segura, sostenible y moderna para todos para el 2030. En todo el mundo, se estima que más de dos mil millones de personas carecen de acceso a la energía moderna.</p>
+
+<p>Para monitorear el progreso hacia los objetivos de acceso a energía para todos, el Programa de Asistencia a la Gestión del Sector Energético (Energy Sector Management Assistance Program (ESMAP)) del Banco Mundial y la Agencia Internacional de Energía han liderado un consorcio de 23 agencias internacionales para establecer el Marco de Seguimiento Global de la SE4All (Global Track Framework  - GTF) que describe cómo medir la línea de base y el progreso hacia las metas de la SE4All mediante la recopilación de datos de energía con regularidad.</p>
+
+<p>El ESMAP, bajo la iniciativa SE4ALL, en consulta con múltiples socios de desarrollo, ha desarrollado el Enfoque Multi-nivel (<strong>Multi-Tier Framework (MTF)</strong>) para monitorear y evaluar el acceso a la energía siguiendo una metodología multidimensional.</p>
+
+<h2 id="la-nueva-definición-de-acceso-a-energía">La nueva definición de acceso a energía</h2>
+
+<p>El MTF redefine el acceso a la energía de la contabilización binaria tradicional (<em>conectado o no conectado; cocinando con leña o no</em>) a una definición multidimensional como <strong>la capacidad de aprovechar la energía adecuada, disponible cuando sea necesario, confiable, de buena calidad, conveniente, asequible, legal, saludable y segura para todos los servicios de energía requeridos</strong>.</p>
+
+<p>Es decir, tener una conexión eléctrica no significa necesariamente tener acceso a la electricidad según la nueva definición, sino que también tiene en cuenta otros aspectos, como, por ejemplo, la confiabilidad, la asequibilidad, entre otros atributos.  Así, el acceso a la energía se mide en el espectro de niveles, desde el Nivel 0 (<em>tier 0</em>) (sin acceso) al Nivel 5 (<em>tier 5</em>) (el nivel más alto de acceso).</p>
+
+<h2 id="matriz-de-evaluación-de-acceso-a-electricidad-a-nivel-de-hogar">Matriz de evaluación de acceso a electricidad a nivel de hogar</h2>
+
+<p>El acceso a la electricidad se mide con base en estándares (atributos) de múltiples niveles, neutrales a la tecnología. Los umbrales sucesivos de estos atributos que están asociados al suministro, permiten un mayor uso de los aparatos eléctricos. Los atributos relevantes para evaluar la electricidad de los hogares estimados por la metodología MTF son:</p>
+
+<ul>
+  <li>Capacidad: Qué electrodomésticos puede utilizar el hogar?</li>
+  <li>Disponibilidad (incluidos el suministro diario y el suministro nocturno): ¿Está disponible la fuente de energía cuando lo necesita el hogar?</li>
+  <li>Confiabilidad:  ¿Es el servicio de electricidad interrumpido con frecuencia?</li>
+  <li>Calidad: ¿La fluctuaci ón del voltaje avería los electrodomésticos?</li>
+  <li>Asequibilidad: ¿Puede el hogar permitirse comprar la cantidad mínima de electricidad?</li>
+  <li>Legalidad: ¿Se presta el servicio formalmente o por conexiones informales?</li>
+  <li>Salud y seguridad: ¿Es seguro usar el servicio de electricidad o está el hogar arriesgando su salud si usa el servicio?</li>
+</ul>
+
+<p>Cada atributo se evalúa por separado y el nivel general para el acceso del hogar a la electricidad se calcula aplicando el nivel más bajo obtenido en cualquiera de los atributos. Es decir, el atributo con la calificación más baja determina el nivel de acceso del hogar.</p>
+
+<h2 id="matriz-de-evaluación-de-acceso-a-servicios-de-electricidad">Matriz de evaluación de acceso a servicios de electricidad</h2>
+
+<p>La metodología MTF define un marco separado para medir el acceso a los servicios de electricidad. Una mejora gradual del suministro de electricidad permite un mayor y mejor acceso a diferentes electrodomésticos para diferentes necesidades. Así, en una segunda matriz que mide el acceso a los servicios de electricidad, la categorización va de acuerdo según el tipo de aparatos utilizados en el hogar (Tabla 2). Es posible que un hogar obtenga calificaciones de diferentes niveles a través del acceso al suministro de electricidad y el acceso a los servicios de electricidad, lo que refleja la disponibilidad de electrodomésticos a pesar del suministro deficiente o la incapacidad para comprar aparatos (o un alto consumo de electricidad) a pesar del suministro adecuado.</p>
+
+<h2 id="evaluación-de-acceso-a-energía-moderna-para-el-sistema-de-cocción-del-hogar">Evaluación de acceso a energía moderna para el sistema de cocción del hogar</h2>
+
+<p>El marco de múltiples niveles para la medición del acceso a la energía para cocinar se basa en siete atributos: 
+(i) salud (basado en la contaminación del aire interior), (ii) conveniencia (basado en el tiempo de recolección de combustible y tiempo de preparación de la estufa), (iii) seguridad, (iv) asequibilidad (incluido el gasto en estufas y combustible), (v) eficiencia, (vi) calidad y (vii) disponibilidad. En esta metodología un sistema de cocción hace referencia a la combinación de una estufa y un tipo de combustible para cocinar. Un sistema de cocción incluye todas las soluciones de cocción que se utilizan, así como el lugar de cocción y la ventilación.</p>
+
+<p>Los datos sobre el acceso a la energía para cocinar pueden recopilarse a través de fuentes del lado de la demanda (encuestas de energía doméstica) o del lado de la oferta (programa, proyecto y datos del fabricante). Sin embargo, los datos sobre algunos atributos y parámetros solo son factibles a partir de la medición del lado de la demanda tales como la ventilación, la calidad del combustible utilizado, la conveniencia, la disponibilidad y la asequibilidad. Otros parámetros, como la calidad del aire interior y la eficiencia, se pueden medir mejor a través de los datos del lado de la oferta basados en pruebas o mediante la estimación basada en modelos matemáticos.</p>
+
+<ul>
+  <li>Asequibilidad: ¿Puede el hogar pagar por ambos, la cocina y el combustible?</li>
+  <li>Conveniencia: ¿Qué tanto tarda el hogar en conseguir y preparar el combustible y la cocina antes que una persona del hogar pueda cocinar?</li>
+  <li>Disponibilidad: ¿Está disponible el combustible cuando el hogar lo necesita para cocinar?</li>
+  <li>Calidad: ¿La calidad del combustible afecta la cocción?</li>
+  <li>Seguridad:¿Es seguro usar la cocina o se expone la persona a posibles accidentes? ¿Han ocurrido accidentes en el pasado debido al uso del combustible?</li>
+</ul>
+
+<p>Las normas para la medición de los múltiples atributos para describir el acceso a sistemas de cocción de los hogares se resumen en la siguiente tabla (Tabla 3). <strong>El nivel más bajo entre todos los atributos determina el acceso general al nivel de cocina para el hogar</strong>. Se puede calcular un índice de acceso de los hogares a las soluciones de cocción para cualquier área geográfica dada como el promedio de los niveles en todos los hogares en esa área, ajustado a una escala de 100.</p>
+
+              <nav class="c-page__nav">
+  
+
+  
+</nav>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>

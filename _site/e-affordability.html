@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Salud y Seguridad</title>
-  <meta name="description" content="      ```pythonimport os,sys  ">
+  <title>Capacidad</title>
+  <meta name="description" content="Work in progress…">
 
   <link rel="canonical" href="http://0.0.0.0:4000//e-affordability.html">
   <link rel="alternate" type="application/rss+xml" title="Reporte de Acceso a Energía" href="http://0.0.0.0:4000//feed.xml">
 
   <meta property="og:url"         content="http://0.0.0.0:4000//e-affordability.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Salud y Seguridad" />
-<meta property="og:description" content="      ```pythonimport os,sys  " />
+<meta property="og:title"       content="Capacidad" />
+<meta property="og:description" content="Work in progress…" />
 <meta property="og:image"       content="" />
 
 
@@ -27,13 +27,13 @@
   "mainEntityOfPage":
     "http://0.0.0.0:4000//e-affordability.html",
   "headline":
-    "Salud y Seguridad",
+    "Capacidad",
   "datePublished":
-    "2019-05-28T07:43:35-05:00",
+    "2019-06-02T00:18:02-05:00",
   "dateModified":
-    "2019-05-28T07:43:35-05:00",
+    "2019-06-02T00:18:02-05:00",
   "description":
-    "      ```pythonimport os,sys  ",
+    "Work in progress…",
   "author": {
     "@type": "Person",
     "name": "HEDERA"
@@ -449,7 +449,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/hedera.html"
+          href="/intro.html"
         >
           
             1.
@@ -535,10 +535,33 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/electricity.html"
+          href="/gps.html"
         >
           
             2.
+          
+          Geolocalización
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/e-access.html"
+        >
+          
+            3.
           
           Acceso a Electricidad
         </a>
@@ -709,7 +732,7 @@ initFunction(initQuery);
           href="/cooking.html"
         >
           
-            3.
+            4.
           
           Cocción
         </a>
@@ -795,7 +818,7 @@ initFunction(initQuery);
           href="/cooking.html"
         >
           
-            4.
+            5.
           
           Conclusiones
         </a>
@@ -865,80 +888,20 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
-
-<span class="s">'''
-This is an option to load the libraries directly from the HIT library.
-However, the path shall be set correctly.
-'''</span>
-<span class="c"># add the path to HIT</span>
-<span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="s">'../../src'</span><span class="p">)))</span>
-
-<span class="c"># import HIT libraries</span>
-<span class="kn">import</span> <span class="nn">hedera_types</span> <span class="k">as</span> <span class="n">hedera</span>
-<span class="kn">import</span> <span class="nn">odk_interface</span> <span class="k">as</span> <span class="n">odk</span>
-<span class="kn">import</span> <span class="nn">tiers</span> <span class="k">as</span> <span class="n">mtf</span>
-
-<span class="c"># create the demo institution</span>
-<span class="n">sunrise</span> <span class="o">=</span> <span class="n">hedera</span><span class="o">.</span><span class="n">mfi</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">odk_data_dir</span> <span class="o">=</span> <span class="s">'../../_datasets/DataODK/'</span>
-
-<span class="n">odk_survey_folder</span> <span class="o">=</span> <span class="p">[</span><span class="s">'PEPI_19_03_19/'</span><span class="p">,</span><span class="s">'PEPI_FONDESURCO_19_04_17/'</span><span class="p">]</span>
-<span class="n">odk_data_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_survey_folder</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">'PEPI_results.csv'</span><span class="p">,</span>
-                 <span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_survey_folder</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> 
-                 <span class="s">'PEPI_FONDESURCO_2_results.csv'</span><span class="p">]</span>
-<span class="n">sunrise</span><span class="o">.</span><span class="n">gpsFile</span> <span class="o">=</span> <span class="s">'../../_datasets/Demo/GPS.csv'</span>
-
-<span class="c"># read database</span>
-<span class="n">data_demo</span> <span class="o">=</span> <span class="n">sunrise</span><span class="o">.</span><span class="n">read_survey</span><span class="p">(</span><span class="n">odk_data_name</span><span class="p">)</span>
-
-<span class="c"># aggregate data</span>
-<span class="n">HH</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">households</span><span class="p">(</span><span class="n">data_demo</span><span class="p">)</span>
-<span class="n">collections</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">collections</span><span class="p">(</span><span class="n">HH</span><span class="p">,[</span><span class="n">sunrise</span><span class="p">])</span>
-</code></pre></div>    </div>
-  </div>
-
-</div>
-
-<p>Affordability</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sunrise</span><span class="o">.</span><span class="n">tier_plots</span><span class="p">(</span><span class="n">HH</span><span class="p">,</span><span class="s">'E_Affordability'</span><span class="p">)</span>
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-
-      <p class="output_png"><img src="images/e-affordability_2_0.png" alt="png" /></p>
-
-    </div>
-  </div>
-  <div class="output_wrapper">
-    <div class="output_subarea">
-
-      <p class="output_png"><img src="images/e-affordability_2_1.png" alt="png" /></p>
-
-    </div>
-  </div>
-</div>
+              <h2 id="work-in-progress">Work in progress…</h2>
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/e-affordability">
-      〈 <span class="u-margin-right-tiny"></span> Calidad
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/e-services">
+      〈 <span class="u-margin-right-tiny"></span> Servicios
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/cooking">
-      Cocción <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/e-affordability">
+      Asequibilidad <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

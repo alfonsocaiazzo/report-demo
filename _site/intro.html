@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Home</title>
-  <meta name="description" content="Books with Jupyter and Jekyll">
+  <title>Contexto</title>
+  <meta name="description" content="Reporte de Acceso a Energía">
 
   <link rel="canonical" href="http://0.0.0.0:4000//intro.html">
   <link rel="alternate" type="application/rss+xml" title="Reporte de Acceso a Energía" href="http://0.0.0.0:4000//feed.xml">
 
   <meta property="og:url"         content="http://0.0.0.0:4000//intro.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Home" />
-<meta property="og:description" content="Books with Jupyter and Jekyll" />
+<meta property="og:title"       content="Contexto" />
+<meta property="og:description" content="Reporte de Acceso a Energía" />
 <meta property="og:image"       content="" />
 
 
@@ -27,13 +27,13 @@
   "mainEntityOfPage":
     "http://0.0.0.0:4000//intro.html",
   "headline":
-    "Home",
+    "Contexto",
   "datePublished":
-    "2019-05-28T07:43:35-05:00",
+    "2019-06-02T00:18:02-05:00",
   "dateModified":
-    "2019-05-28T07:43:35-05:00",
+    "2019-06-02T00:18:02-05:00",
   "description":
-    "Books with Jupyter and Jekyll",
+    "Reporte de Acceso a Energía",
   "author": {
     "@type": "Person",
     "name": "HEDERA"
@@ -448,8 +448,8 @@ initFunction(initQuery);
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/hedera.html"
+        <a class="c-sidebar__entry c-sidebar__entry--active"
+          href="/intro.html"
         >
           
             1.
@@ -535,10 +535,33 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/electricity.html"
+          href="/gps.html"
         >
           
             2.
+          
+          Geolocalización
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/e-access.html"
+        >
+          
+            3.
           
           Acceso a Electricidad
         </a>
@@ -709,7 +732,7 @@ initFunction(initQuery);
           href="/cooking.html"
         >
           
-            3.
+            4.
           
           Cocción
         </a>
@@ -795,7 +818,7 @@ initFunction(initQuery);
           href="/cooking.html"
         >
           
-            4.
+            5.
           
           Conclusiones
         </a>
@@ -856,67 +879,52 @@ initFunction(initQuery);
             
 
             <div class="c-textbook__content">
-              <h1 id="books-with-jupyter-and-jekyll">Books with Jupyter and Jekyll</h1>
+              <h1 id="reporte-de-acceso-a-energía">Reporte de Acceso a Energía</h1>
 
-<p><img src="https://circleci.com/gh/jupyter/jupyter-book.svg?style=svg" class="left" /></p>
+<p>El objetivo del presente proyecto es analizar el acceso a energía de una muestra de clientes de la 
+institución de microfinanzas <strong>Fondesurco</strong> a través del uso de la herramienta HEDERA 
+collect con el fin de extraer información relevante sobre el uso, costos asociados y atributos del 
+acceso a electricidad y soluciones de cocina de clientes de Fondesurco en zonas rurales y remotas. 
+Con este fin, por medio del uso de la aplicación de la herramienta de HEDERA se recogió una línea base
+del Objetivo de Desarrollo Sostenible 7, elaborando un primer diagnóstico del acceso a energía siguiendo
+los estándares de métricas internacionales, la metodología del “Enfoque Multinivel (Multi-Tier Framework 
+(MTF))” desarrollado por el Banco Mundial y del Índice de Progreso fuera de la Pobreza Energética 
+(Progress out of Energy Poverty Index (PEPI)) 
+<a href="https://depositonce.tu-berlin.de/handle/11303/6708">N. Realpe, PhD Thesis 2017</a></p>
 
-<p>Jupyter Books lets you build an online book using a collection of Jupyter Notebooks
-and Markdown files. Its output is similar to the excellent <a href="https://bookdown.org/yihui/bookdown/">Bookdown</a> tool,
-and adds extra functionality for people running a Jupyter stack.</p>
+<h2 id="metodología">Metodología</h2>
 
-<p>For an example of a book built with Jupyter Books, see the <a href="https://www.textbook.ds100.org/">textbook for Data 100</a> at UC Berkeley.</p>
+<p>Previo al levantamiento de datos todos los involucrados fueron informados y entrenados sobre el uso de las herramientas. 
+Los Analistas recibieron un video GIF a sus teléfonos celulares con el procedimiento de uso del la herramienta HederaGPS y el 
+Operador fue entrenado durante de una videollamada haciendo uso presencial de la herramienta HederaSDG7.</p>
 
-<p>Here are a few features of Jupyter Books</p>
+<p>El levantamiento de información fue realizado en 2 etapas:
+Durante la primera etapa se realizó una visita domiciliaria haciendo uso de la herramienta HederaGPS para el proceso de evaluación 
+de crédito. A su vez, durante esta visita se hizo la entrega al cliente de un folleto con la información general del contenido de la 
+encuesta. También se comunicó al cliente sobre la llamada de un "Operador" para realizar la encuesta digital.</p>
 
+<p>Durante la segunda etapa se ha hecho uso de los datos recoletos durante la primera etapa. Estos datos se han puesto a disposición 
+de área de IDI de Fondesurco (Flor Villena Sosa) para que el Operador identificara y contactara vía telefónica a los clientes que hayan 
+realizado un desembolso. Durante la llamada telefónica el Operador utilizó la herramienta HederaSDG7. El tamaño de muestra correspondió 
+al número de clientes que hayan realizado una operación de desembolso durante el proyecto.</p>
+
+<h2 id="instalación-de-la-herramienta-hedera-collect">Instalación de la Herramienta HEDERA collect</h2>
+
+<p>La herramienta se compone de dos compontes independientes y complementarias:</p>
 <ul>
-  <li>All course content is written in markdown and Jupyter Notebooks, stored in <code class="highlighter-rouge">notebooks/</code></li>
-  <li>The Jupyter Book repo comes packaged with helper scripts to convert these into Jekyll pages (in <code class="highlighter-rouge">scripts/</code>) that can be hosted for free on GitHub</li>
-  <li>Pages can have <a href="https://mybinder.org">Binder</a> or JupyterHub links automatically added for interactivity.</li>
-  <li>The website itself is based on Jekyll, and is highly extensible and can be freely-hosted on GitHub.</li>
-  <li>There are lots of nifty HTML features under-the-hood, such as Turbolinks fast-navigation and
-click-to-copy in code cells.</li>
+  <li><strong>HederaGPS</strong>, para la recolección y el procesamiento de los datos relacionados a la geolocalización y los números 
+DNI de los entrevistados</li>
+  <li><strong>HederaSDG7</strong> para el levantamiento de información de acceso a energía basado en la métrica del Banco Mundial 
+Multi-Tier Framework (MTF) por medio de una encuesta digital.</li>
 </ul>
 
-<h2 id="getting-started">Getting started</h2>
-
-<p>To get started, you may be interested in the following links.
-Here are a few links of interest:</p>
+<h2 id="tamaño-de-muestra-y-recollección-de-datos">Tamaño de muestra y recollección de datos</h2>
 
 <ul>
-  <li>
-    <p><strong><a href="features/features">Quickstart</a></strong> is a quick demo and overview of Jupyter Books.</p>
-  </li>
-  <li>
-    <p><strong><a href="guide/01_overview">The Jupyter Book Guide</a></strong>
-will step you through the process of configuring and building your own Jupyter Book.</p>
-  </li>
-  <li>
-    <p><strong><a href="https://github.com/jupyter/jupyter-book">The Jupyter Book template repo</a></strong> is the template
-repository you’ll use as a start for your Jupyter Book.</p>
-  </li>
-  <li>
-    <p><strong>A demo of the Jupyter Book</strong> can be browsed via the sidebar to the left.</p>
-  </li>
+  <li>137 clientes</li>
+  <li>229 llamadas en total</li>
+  <li>Duración de la entrevista: 6 minutos en promedio</li>
 </ul>
-
-<h2 id="installation">Installation</h2>
-
-<p>Here’s a brief rundown of how to create your own Jupyter Book using this site. For a more
-complete guide, see <a href="guide/01_overview">the Jupyter Book guide</a>.</p>
-
-<ul>
-  <li>Fork the Jupyter Book template repo</li>
-  <li>Replace the demo notebooks in <code class="highlighter-rouge">content/</code> with your own notebooks and markdown files.</li>
-  <li>Create a Table of Contents yaml file by editing <code class="highlighter-rouge">_data/toc.yaml</code>.</li>
-  <li>Generate the Jekyll markdown for your notebooks by running <code class="highlighter-rouge">scripts/generate_book.py</code></li>
-  <li>Push your changes to GitHub (or wherever you host your site)!</li>
-</ul>
-
-<h2 id="acknowledgements">Acknowledgements</h2>
-
-<p>Jupyter Books was originally created by <a href="http://www.samlau.me/">Sam Lau</a> and <a href="https://predictablynoisy.com">Chris Holdgraf</a>
-with support of the <strong>UC Berkeley Data Science Education Program and the Berkeley
-Institute for Data Science</strong>.</p>
 
 
               <nav class="c-page__nav">
@@ -929,8 +937,8 @@ Institute for Data Science</strong>.</p>
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/hedera">
-      Report <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/mtf">
+      El enfoque multinivel (Multi-tier ... <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

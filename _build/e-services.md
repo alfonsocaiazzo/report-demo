@@ -4,7 +4,7 @@ kernel_name: python3
 has_widgets: false
 title: 'Servicios'
 prev_page:
-  url: /electricity
+  url: /e-access
   title: 'Acceso a Electricidad'
 next_page:
   url: /e-affordability
@@ -15,7 +15,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 # Servicios
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 import os,sys
 here = os.path.abspath('')
@@ -34,7 +34,7 @@ odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv',
 sunrise.gpsFile = '../../_datasets/Demo/GPS.csv'
 data_demo = sunrise.read_survey(odk_data_name)
 HH = odk.households(data_demo)
-collections = odk.collections(HH,[sunrise])
+collections = odk.overview(HH,[sunrise])
 ```
 </div>
 
@@ -69,6 +69,6 @@ sunrise.tier_plots(HH,'E_Services')
 </div>
 </div>
 
-### Hay una correlaci\'on entre el nivel de suministro de electricidad y los ingresos mensuales
+### Hay una correlación entre el nivel de suministro de electricidad y los ingresos mensuales
 
 En el quintil más bajo de ingresos se observan aún hogares clasificados en niveles superiores (3). Por otro lado, en los quintiles más altos, 4 y 5 todavía se encuentran hogares en los niveles más bajos, 0. A diferencia de lo esperado, sobre el 50% de los hogares en el cuarto quintil, están en el nivel 1 de suministro de electricidad.

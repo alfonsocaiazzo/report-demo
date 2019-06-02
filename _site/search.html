@@ -29,9 +29,9 @@
   "headline":
     "Search the site",
   "datePublished":
-    "2019-05-28T07:43:35-05:00",
+    "2019-06-02T00:18:02-05:00",
   "dateModified":
-    "2019-05-28T07:43:35-05:00",
+    "2019-06-02T00:18:02-05:00",
   "description":
     "Reporte de Acceso a Energía, Proyecto Piloto 2019",
   "author": {
@@ -449,7 +449,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/hedera.html"
+          href="/intro.html"
         >
           
             1.
@@ -535,10 +535,33 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/electricity.html"
+          href="/gps.html"
         >
           
             2.
+          
+          Geolocalización
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/e-access.html"
+        >
+          
+            3.
           
           Acceso a Electricidad
         </a>
@@ -709,7 +732,7 @@ initFunction(initQuery);
           href="/cooking.html"
         >
           
-            3.
+            4.
           
           Cocción
         </a>
@@ -795,7 +818,7 @@ initFunction(initQuery);
           href="/cooking.html"
         >
           
-            4.
+            5.
           
           Conclusiones
         </a>
@@ -857,7 +880,7 @@ initFunction(initQuery);
 <script>
     // Add the lunr store since we will now search it
     var store = [{
-        "title": "Conclusiones",
+        "title": "Cocción",
         
         "excerpt":
             "Books with Jupyter and Jekyll Jupyter Books lets you build an online book using a collection of Jupyter Notebooks and Markdown files. Its output is similar to the excellent Bookdown tool, and adds extra functionality for people running a Jupyter stack. For an example of a book built with Jupyter Books, see the textbook for Data 100 at UC Berkeley. Here are a few features of Jupyter Books All course content is written in markdown and Jupyter Notebooks, stored in notebooks/ The Jupyter Book repo comes packaged with helper scripts to convert these into Jekyll pages (in scripts/) that can...",
@@ -865,18 +888,18 @@ initFunction(initQuery);
         "tags": [],
         "url": "http://0.0.0.0:4000/cooking.html",
         "teaser":null},{
-        "title": "Disponibilidad",
+        "title": "Acceso a Electricidad",
         
         "excerpt":
-            "Contexto El objetivo del presente proyecto es analizar el acceso a energía de una muestra de clientes de la institución de microfinanzas Fondesurco a través del uso de la herramienta HEDERA collect con el fin de extraer información relevante sobre el uso, costos asociados y atributos del acceso a electricidad y soluciones de cocina de clientes de Fondesurco en zonas rurales y remotas. Con este fin, por medio del uso de la aplicación de la herramienta de HEDERA se recogió una línea base del Objetivo de Desarrollo Sostenible 7, elaborando un primer diagnóstico del acceso a energía siguiendo los estándares...",
+            "Acceso a electricidad import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf # institution data sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv', odk_data_dir + odk_survey_folder[1] + 'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv' data_demo = sunrise.read_survey(odk_data_name) HH = odk.households(data_demo) collection_overview = odk.overview(HH,[sunrise]) sources_summary = odk.summary(collection_overview,hedera.keys().powerSources, hedera.names('es').powerSources, hedera.keys().powerSourcesColors) stoves_summary = odk.summary(collection_overview,hedera.keys().stoves, hedera.names('es').stoves, hedera.keys().stovesColors) fuels_summary = odk.summary(collection_overview,hedera.keys().fuels, hedera.names('es').fuels, hedera.keys().fuelsColors) Casi la totalidad de los clientes están conectados a la red En todas las agencias, menos en Orcopampa, todos los clientes encuestados están conectados a la red. Dos...",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/e-access.html",
         "teaser":null},{
-        "title": "Salud y Seguridad",
+        "title": "Capacidad",
         
         "excerpt":
-            "        import os,sys  ''' This is an option to load the libraries directly from the HIT library. However, the path shall be set correctly. ''' # add the path to HIT here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src')))  # import HIT libraries import hedera_types as hedera import odk_interface as odk import tiers as mtf  # create the demo institution sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/'  odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv',                  odk_data_dir + odk_survey_folder[1] +                   'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv'  # read database data_demo = sunrise.read_survey(odk_data_name)  # aggregate data HH = odk.households(data_demo) collections = odk.collections(HH,[sunrise])            Affordability           sunrise.tier_plots(HH,'E_Affordability')                                                               ",
+            "Work in progress…  ",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/e-affordability.html",
@@ -884,42 +907,18 @@ initFunction(initQuery);
         "title": "Servicios",
         
         "excerpt":
-            "Servicios import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf # institution data sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv', odk_data_dir + odk_survey_folder[1] + 'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv' data_demo = sunrise.read_survey(odk_data_name) HH = odk.households(data_demo) collections = odk.collections(HH,[sunrise]) La mayoría de los hogares se encuentran en el nivel 1 de acceso a energía A pesar de la casi total cobertura de la red el 98% de los hogares encuestados, dista de ser un suministro de electricidad de calidad. Cerca al 80% de la...",
+            "Servicios import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf # institution data sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv', odk_data_dir + odk_survey_folder[1] + 'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv' data_demo = sunrise.read_survey(odk_data_name) HH = odk.households(data_demo) collections = odk.overview(HH,[sunrise]) La mayoría de los hogares se encuentran en el nivel 1 de acceso a energía A pesar de la casi total cobertura de la red el 98% de los hogares encuestados, dista de ser un suministro de electricidad de calidad. Cerca al 80% de la...",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/e-services.html",
         "teaser":null},{
-        "title": "Acceso a Electricidad",
+        "title": "Geolocalización",
         
         "excerpt":
-            "Books with Jupyter and Jekyll Jupyter Books lets you build an online book using a collection of Jupyter Notebooks and Markdown files. Its output is similar to the excellent Bookdown tool, and adds extra functionality for people running a Jupyter stack. For an example of a book built with Jupyter Books, see the textbook for Data 100 at UC Berkeley. Here are a few features of Jupyter Books All course content is written in markdown and Jupyter Notebooks, stored in notebooks/ The Jupyter Book repo comes packaged with helper scripts to convert these into Jekyll pages (in scripts/) that can...",
+            "Geolocalización de las encuestas import os,sys, folium, pandas here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk # institution data fondesurco = hedera.mfi(2) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv', odk_data_dir + odk_survey_folder[1] + 'PEPI_FONDESURCO_2_results.csv'] fondesurco.gpsFile = '../../_datasets/Fondesurco/HederaGPS/All.txt' fondesurco.data_client_file = '../../_datasets/Fondesurco/ClientDatabases/data_with_GPS_3.csv' data = fondesurco.read_survey(odk_data_name) HH = odk.households(data) #Define initial geolocation initial_location = [-15.2098005, -72.9029974] map_osm = folium.Map(initial_location, zoom_start=9) colors = {0: hedera.tier_color(0), 1 : hedera.tier_color(1), 2 : hedera.tier_color(2), 3 : hedera.tier_color(3), 4 : hedera.tier_color(4), 5: hedera.tier_color(5)} Encuestas por oficina Fueron encuestados 137 clientes, en 5 diferentes oficinas: Pausa, Orcopampa,...",
         "categories": [],
         "tags": [],
-        "url": "http://0.0.0.0:4000/electricity.html",
-        "teaser":null},{
-        "title": "Features and customization",
-        
-        "excerpt":
-            "Features This is a short demonstration textbook to show the general layout / style of textbooks built with Jupyter and Jekyll. The markdown files for this page (and others in the textbook) is generated from the notebooks with the scripts/generate_textbook.py script, which is called when you run make book. The content for the book is contained in a folder in the site’s repository called content/. It has a combination of markdown and Jupyter notebooks. This content is rendered into the textbook that you see here! To begin, click on one of the chapter sections in the sidebar to the left....",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/features/features.html",
-        "teaser":null},{
-        "title": "Markdown files",
-        
-        "excerpt":
-            "Creating book content The two kinds of files that contain course content are: Jupyter Notebooks Markdown files Each are contained in the content/ folder and referenced from _data/toc.yml. If the file is markdown, it will be copied over with front-matter YAML added so that Jekyll can parse it Sidebars with Jekyll You may notice that there’s a sidebar to the right (if your screen is wide enough). These are automatically generated from the headers that are present in your page. The sidebar will automatically capture all 2nd and 3rd level section headers. The best way to designate these headers is...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/features/markdown.html",
-        "teaser":null},{
-        "title": "Jupyter notebooks",
-        
-        "excerpt":
-            "Content with notebooks You can also create content with Jupyter Notebooks. The content for the current page is contained in a Jupyter Notebook in the notebooks/ folder of the repository. This means that we can include code blocks and their outputs, and export them to Jekyll markdown. You can find the original notebook for this page at this address Markdown + notebooks As it is markdown, you can embed images, HTML, etc into your posts! You an also $add_{math}$ and or But make sure you \\$Escape \\$your \\$dollar signs \\$you want to keep! Code blocks and image outputs Textbooks with...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/features/notebooks.html",
+        "url": "http://0.0.0.0:4000/gps.html",
         "teaser":null},{
         "title": "Herramienta para recollección de datos",
         
@@ -932,15 +931,7 @@ initFunction(initQuery);
         "title": "Contexto",
         
         "excerpt":
-            "Contexto El objetivo del presente proyecto es analizar el acceso a energía de una muestra de clientes de la institución de microfinanzas Fondesurco a través del uso de la herramienta HEDERA collect con el fin de extraer información relevante sobre el uso, costos asociados y atributos del acceso a electricidad y soluciones de cocina de clientes de Fondesurco en zonas rurales y remotas. Con este fin, por medio del uso de la aplicación de la herramienta de HEDERA se recogió una línea base del Objetivo de Desarrollo Sostenible 7, elaborando un primer diagnóstico del acceso a energía siguiendo los estándares...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/hedera.html",
-        "teaser":null},{
-        "title": "Home",
-        
-        "excerpt":
-            "Books with Jupyter and Jekyll Jupyter Books lets you build an online book using a collection of Jupyter Notebooks and Markdown files. Its output is similar to the excellent Bookdown tool, and adds extra functionality for people running a Jupyter stack. For an example of a book built with Jupyter Books, see the textbook for Data 100 at UC Berkeley. Here are a few features of Jupyter Books All course content is written in markdown and Jupyter Notebooks, stored in notebooks/ The Jupyter Book repo comes packaged with helper scripts to convert these into Jekyll pages (in scripts/) that can...",
+            "Reporte de Acceso a Energía El objetivo del presente proyecto es analizar el acceso a energía de una muestra de clientes de la institución de microfinanzas Fondesurco a través del uso de la herramienta HEDERA collect con el fin de extraer información relevante sobre el uso, costos asociados y atributos del acceso a electricidad y soluciones de cocina de clientes de Fondesurco en zonas rurales y remotas. Con este fin, por medio del uso de la aplicación de la herramienta de HEDERA se recogió una línea base del Objetivo de Desarrollo Sostenible 7, elaborando un primer diagnóstico del acceso a...",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/intro.html",

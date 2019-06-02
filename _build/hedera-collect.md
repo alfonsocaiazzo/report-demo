@@ -4,8 +4,8 @@ prev_page:
   url: /methodology
   title: 'Metodología de piloto'
 next_page:
-  url: /electricity
-  title: 'Acceso a Electricidad'
+  url: /gps
+  title: 'Geolocalización'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # La herramienta HEDERA collect

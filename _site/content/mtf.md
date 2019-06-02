@@ -10,7 +10,7 @@ El ESMAP, bajo la iniciativa SE4ALL, en consulta con múltiples socios de desarr
 
 ## La nueva definición de acceso a energía
 
-El MTF redefine el acceso a la energía de la contabilización binaria tradicional (*conectado o no conectado; cocinando con le\~na o no*) a una definición multidimensional como **la capacidad de aprovechar la energía adecuada, disponible cuando sea necesario, confiable, de buena calidad, conveniente, asequible, legal, saludable y segura para todos los servicios de energía requeridos**. 
+El MTF redefine el acceso a la energía de la contabilización binaria tradicional (*conectado o no conectado; cocinando con leña o no*) a una definición multidimensional como **la capacidad de aprovechar la energía adecuada, disponible cuando sea necesario, confiable, de buena calidad, conveniente, asequible, legal, saludable y segura para todos los servicios de energía requeridos**. 
 
 Es decir, tener una conexión eléctrica no significa necesariamente tener acceso a la electricidad según la nueva definición, sino que también tiene en cuenta otros aspectos, como, por ejemplo, la confiabilidad, la asequibilidad, entre otros atributos.  Así, el acceso a la energía se mide en el espectro de niveles, desde el Nivel 0 (*tier 0*) (sin acceso) al Nivel 5 (*tier 5*) (el nivel más alto de acceso).
 

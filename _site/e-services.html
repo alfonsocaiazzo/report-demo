@@ -29,9 +29,9 @@
   "headline":
     "Servicios",
   "datePublished":
-    "2019-05-28T07:43:35-05:00",
+    "2019-06-02T00:18:02-05:00",
   "dateModified":
-    "2019-05-28T07:43:35-05:00",
+    "2019-06-02T00:18:02-05:00",
   "description":
     "Servicios",
   "author": {
@@ -449,7 +449,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/hedera.html"
+          href="/intro.html"
         >
           
             1.
@@ -535,10 +535,33 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/electricity.html"
+          href="/gps.html"
         >
           
             2.
+          
+          Geolocalización
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/e-access.html"
+        >
+          
+            3.
           
           Acceso a Electricidad
         </a>
@@ -709,7 +732,7 @@ initFunction(initQuery);
           href="/cooking.html"
         >
           
-            3.
+            4.
           
           Cocción
         </a>
@@ -795,7 +818,7 @@ initFunction(initQuery);
           href="/cooking.html"
         >
           
-            4.
+            5.
           
           Conclusiones
         </a>
@@ -868,7 +891,7 @@ initFunction(initQuery);
               <h1 id="servicios">Servicios</h1>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
 <span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="s">'../../src'</span><span class="p">)))</span>
@@ -886,7 +909,7 @@ initFunction(initQuery);
 <span class="n">sunrise</span><span class="o">.</span><span class="n">gpsFile</span> <span class="o">=</span> <span class="s">'../../_datasets/Demo/GPS.csv'</span>
 <span class="n">data_demo</span> <span class="o">=</span> <span class="n">sunrise</span><span class="o">.</span><span class="n">read_survey</span><span class="p">(</span><span class="n">odk_data_name</span><span class="p">)</span>
 <span class="n">HH</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">households</span><span class="p">(</span><span class="n">data_demo</span><span class="p">)</span>
-<span class="n">collections</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">collections</span><span class="p">(</span><span class="n">HH</span><span class="p">,[</span><span class="n">sunrise</span><span class="p">])</span>
+<span class="n">collections</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">overview</span><span class="p">(</span><span class="n">HH</span><span class="p">,[</span><span class="n">sunrise</span><span class="p">])</span>
 </code></pre></div>    </div>
   </div>
 
@@ -918,14 +941,14 @@ initFunction(initQuery);
   </div>
 </div>
 
-<h3 id="hay-una-correlacion-entre-el-nivel-de-suministro-de-electricidad-y-los-ingresos-mensuales">Hay una correlaci'on entre el nivel de suministro de electricidad y los ingresos mensuales</h3>
+<h3 id="hay-una-correlación-entre-el-nivel-de-suministro-de-electricidad-y-los-ingresos-mensuales">Hay una correlación entre el nivel de suministro de electricidad y los ingresos mensuales</h3>
 
 <p>En el quintil más bajo de ingresos se observan aún hogares clasificados en niveles superiores (3). Por otro lado, en los quintiles más altos, 4 y 5 todavía se encuentran hogares en los niveles más bajos, 0. A diferencia de lo esperado, sobre el 50% de los hogares en el cuarto quintil, están en el nivel 1 de suministro de electricidad.</p>
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/electricity">
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/e-access">
       〈 <span class="u-margin-right-tiny"></span> Acceso a Electricidad
     </a>
   

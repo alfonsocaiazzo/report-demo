@@ -31,7 +31,7 @@
 - divider: true
 
 - title: Contexto
-  url: /hedera
+  url: /intro
   not_numbered: false
   expand_sections: true
   sections:
@@ -45,8 +45,13 @@
     url: /hedera-collect
     not_numbered: true
 
+- title: Geolocalización
+  url: /gps
+  not_numbered: false
+  
+
 - title: Acceso a Electricidad
-  url: /electricity
+  url: /e-access
   not_numbered: false
   expand_sections: true
   sections:
