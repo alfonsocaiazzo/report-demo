@@ -23,9 +23,10 @@ description: >-
   Reporte de Acceso a Energía, Proyecto Piloto 2019
 
 baseurl: /               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: /  # the base hostname & protocol for your site, e.g. http://example.com 
+# Note: if the online version is created in github, it takes the name of the book as sub-domain
+url: https://alfonsocaiazzo.github.io/ # the base hostname & protocol for your site, e.g. http://example.com 
 # Note: 'url' is used only in the online version!
-
+# in github, it becomes https://alfonsocaiazzo.github.io/report-demo/
   
 #######################################################################################
 # Jupyter Book settings
