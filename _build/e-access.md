@@ -2,13 +2,13 @@
 interact_link: content/e-access.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Acceso a Electricidad'
+title: 'Disponibilidad'
 prev_page:
-  url: /gps
-  title: 'Geolocalización'
+  url: /e-access
+  title: 'Conveniencia'
 next_page:
-  url: /e-services
-  title: 'Servicios'
+  url: /cooking
+  title: 'Conclusiones'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

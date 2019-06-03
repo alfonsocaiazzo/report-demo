@@ -23,7 +23,7 @@ description: >-
   Reporte de Acceso a Energía, Proyecto Piloto 2019
 
 baseurl: /               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: www.hedera.online              # the base hostname & protocol for your site, e.g. http://example.com
+url: https://alfonsocaiazzo.github.io/report-demo/   # the base hostname & protocol for your site, e.g. http://example.com
 
   
 #######################################################################################

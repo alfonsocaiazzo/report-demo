@@ -1,11 +1,11 @@
 ---
-title: 'Cocción'
+title: 'Conclusiones'
 prev_page:
-  url: /e-affordability
-  title: 'Salud y Seguridad'
-next_page:
   url: /e-access
-  title: 'Asequibilidad'
+  title: 'Disponibilidad'
+next_page:
+  url: http://hedera.online
+  title: 'HEDERA'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # Books with Jupyter and Jekyll
