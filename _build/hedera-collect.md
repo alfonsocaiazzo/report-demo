@@ -1,5 +1,5 @@
 ---
-title: 'Herramienta para recollección de datos'
+title: 'Herramienta para recolección de datos'
 prev_page:
   url: /methodology
   title: 'Metodología de piloto'

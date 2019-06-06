@@ -5,10 +5,10 @@ has_widgets: false
 title: 'Geolocalización'
 prev_page:
   url: /hedera-collect
-  title: 'Herramienta para recollección de datos'
+  title: 'Herramienta para recolección de datos'
 next_page:
-  url: /e-access
-  title: 'Acceso a Electricidad'
+  url: /interact
+  title: 'Interactivo'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

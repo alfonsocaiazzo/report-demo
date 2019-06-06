@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Search the site</title>
-  <meta name="description" content="Reporte de Acceso a Energía, Proyecto Piloto 2019">
+  <title>Interactivo</title>
+  <meta name="description" content="Analísis interactivoEn esa sección es posible calcular y filtrar los datos a nivel de hogar simplemente arrastrando las variables de la lista a la izquierda ...">
 
-  <link rel="canonical" href="http://0.0.0.0:4000//search">
+  <link rel="canonical" href="http://0.0.0.0:4000//interact.html">
   <link rel="alternate" type="application/rss+xml" title="Reporte de Acceso a Energía" href="http://0.0.0.0:4000//feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000//search" />
+  <meta property="og:url"         content="http://0.0.0.0:4000//interact.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Search the site" />
-<meta property="og:description" content="Reporte de Acceso a Energía, Proyecto Piloto 2019" />
+<meta property="og:title"       content="Interactivo" />
+<meta property="og:description" content="Analísis interactivoEn esa sección es posible calcular y filtrar los datos a nivel de hogar simplemente arrastrando las variables de la lista a la izquierda ..." />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000//search",
+    "http://0.0.0.0:4000//interact.html",
   "headline":
-    "Search the site",
+    "Interactivo",
   "datePublished":
     "2019-06-06T03:02:57-05:00",
   "dateModified":
     "2019-06-06T03:02:57-05:00",
   "description":
-    "Reporte de Acceso a Energía, Proyecto Piloto 2019",
+    "Analísis interactivoEn esa sección es posible calcular y filtrar los datos a nivel de hogar simplemente arrastrando las variables de la lista a la izquierda ...",
   "author": {
     "@type": "Person",
     "name": "HEDERA"
@@ -557,7 +557,7 @@ initFunction(initQuery);
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+        <a class="c-sidebar__entry c-sidebar__entry--active"
           href="/interact.html"
         >
           
@@ -877,6 +877,13 @@ initFunction(initQuery);
 </nav>
 
       
+      <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+      <aside class="sidebar__right">
+          <header><h4 class="nav__title"><i class="fa fa-list"></i>   En esa página</h4></header>
+          <nav class="onthispage">
+          </nav>
+      </aside>
+      
       <main class="c-textbook__page" tabindex="-1">
           <div class="o-wrapper">
             <div class="c-sidebar-toggle">
@@ -893,100 +900,75 @@ initFunction(initQuery);
 </div>
 
             
+<div class="buttons">
 
-            <div class="c-textbook__content">
-              <div class="search-content__inner-wrap">
-    <input type="text" id="lunr_search" class="search-input" tabindex="-1" placeholder="'Enter your search term...''" />
-    <div id="results" class="results"></div>
+
+
+
+
+
 </div>
 
-<script>
-    // Add the lunr store since we will now search it
-    var store = [{
-        "title": "Conclusiones",
+
+            <div class="c-textbook__content">
+              <h1 id="analísis-interactivo">Analísis interactivo</h1>
+<p>En esa sección es posible calcular y filtrar los datos a nivel de hogar simplemente arrastrando las variables de la lista a la izquierda en la tabla a la derecha</p>
+
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
+<span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="s">'../../src'</span><span class="p">)))</span>
+<span class="kn">import</span> <span class="nn">hedera_types</span> <span class="k">as</span> <span class="n">hedera</span>
+<span class="kn">import</span> <span class="nn">odk_interface</span> <span class="k">as</span> <span class="n">odk</span>
+<span class="kn">import</span> <span class="nn">mtf</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">from</span> <span class="nn">pivottablejs</span> <span class="kn">import</span> <span class="n">pivot_ui</span>
+
+<span class="c"># institution data</span>
+<span class="n">sunrise</span> <span class="o">=</span> <span class="n">hedera</span><span class="o">.</span><span class="n">mfi</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">odk_data_dir</span> <span class="o">=</span> <span class="s">'../../_datasets/DataODK/'</span>
+<span class="n">odk_survey_folder</span> <span class="o">=</span> <span class="p">[</span><span class="s">'PEPI_19_03_19/'</span><span class="p">,</span><span class="s">'PEPI_FONDESURCO_19_04_17/'</span><span class="p">]</span>
+<span class="n">odk_data_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_survey_folder</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">'PEPI_results.csv'</span><span class="p">,</span>
+                 <span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_survey_folder</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> 
+                 <span class="s">'PEPI_FONDESURCO_2_results.csv'</span><span class="p">]</span>
+<span class="n">sunrise</span><span class="o">.</span><span class="n">gpsFile</span> <span class="o">=</span> <span class="s">'../../_datasets/Demo/GPS.csv'</span>
+<span class="n">data_demo</span> <span class="o">=</span> <span class="n">sunrise</span><span class="o">.</span><span class="n">read_survey</span><span class="p">(</span><span class="n">odk_data_name</span><span class="p">)</span>
+<span class="n">HH</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">households</span><span class="p">(</span><span class="n">data_demo</span><span class="p">)</span>
+<span class="n">collections</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">overview</span><span class="p">(</span><span class="n">HH</span><span class="p">,[</span><span class="n">sunrise</span><span class="p">])</span>
+
+<span class="n">pivot_ui</span><span class="p">(</span><span class="n">HH</span><span class="p">)</span>
+
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <div class="output output_html">
+
+        <iframe width="100%" height="500" src="pivottablejs.html" frameborder="0" allowfullscreen=""></iframe>
         
-        "excerpt":
-            "Books with Jupyter and Jekyll Jupyter Books lets you build an online book using a collection of Jupyter Notebooks and Markdown files. Its output is similar to the excellent Bookdown tool, and adds extra functionality for people running a Jupyter stack. For an example of a book built with Jupyter Books, see the textbook for Data 100 at UC Berkeley. Here are a few features of Jupyter Books All course content is written in markdown and Jupyter Notebooks, stored in notebooks/ The Jupyter Book repo comes packaged with helper scripts to convert these into Jekyll pages (in scripts/) that can...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/cooking.html",
-        "teaser":null},{
-        "title": "Disponibilidad",
-        
-        "excerpt":
-            "Acceso a electricidad import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf # institution data sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv', odk_data_dir + odk_survey_folder[1] + 'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv' data_demo = sunrise.read_survey(odk_data_name) HH = odk.households(data_demo) collection_overview = odk.overview(HH,[sunrise]) sources_summary = odk.summary(collection_overview,hedera.keys().powerSources, hedera.names('es').powerSources, hedera.keys().powerSourcesColors) stoves_summary = odk.summary(collection_overview,hedera.keys().stoves, hedera.names('es').stoves, hedera.keys().stovesColors) fuels_summary = odk.summary(collection_overview,hedera.keys().fuels, hedera.names('es').fuels, hedera.keys().fuelsColors) Casi la totalidad de los clientes están conectados a la red En todas las agencias, menos en Orcopampa, todos los clientes encuestados están conectados a la red. Dos...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/e-access.html",
-        "teaser":null},{
-        "title": "Salud y Seguridad",
-        
-        "excerpt":
-            "Work in progress…  ",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/e-affordability.html",
-        "teaser":null},{
-        "title": "Servicios",
-        
-        "excerpt":
-            "Servicios import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf # institution data sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv', odk_data_dir + odk_survey_folder[1] + 'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv' data_demo = sunrise.read_survey(odk_data_name) HH = odk.households(data_demo) collections = odk.overview(HH,[sunrise]) La mayoría de los hogares se encuentran en el nivel 1 de acceso a energía A pesar de la casi total cobertura de la red el 98% de los hogares encuestados, dista de ser un suministro de electricidad de calidad. Cerca al 80% de la...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/e-services.html",
-        "teaser":null},{
-        "title": "Geolocalización",
-        
-        "excerpt":
-            "Geolocalización de las encuestas import os,sys, folium, pandas here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk # institution data fondesurco = hedera.mfi(2) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv', odk_data_dir + odk_survey_folder[1] + 'PEPI_FONDESURCO_2_results.csv'] fondesurco.gpsFile = '../../_datasets/Fondesurco/HederaGPS/All.txt' fondesurco.data_client_file = '../../_datasets/Fondesurco/ClientDatabases/data_with_GPS_3.csv' data = fondesurco.read_survey(odk_data_name) HH = odk.households(data) #Define initial geolocation initial_location = [-15.2098005, -72.9029974] map_osm = folium.Map(initial_location, zoom_start=9) colors = {0: hedera.tier_color(0), 1 : hedera.tier_color(1), 2 : hedera.tier_color(2), 3 : hedera.tier_color(3), 4 : hedera.tier_color(4), 5: hedera.tier_color(5)} Encuestas por oficina Fueron encuestados 137 clientes, en 5 diferentes oficinas: Pausa, Orcopampa,...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/gps.html",
-        "teaser":null},{
-        "title": "Herramienta para recolección de datos",
-        
-        "excerpt":
-            "La herramienta HEDERA collect La herramienta HEDERA collect es una aplicación móvil diseñada para captar la información más relevante sobre acceso a servicios básicos a nivel de hogar para medir y monitorear los Objetivos de Desarrollo Sostenible. El primer servicio básico que evalúa HEDERA collect está enfocado en el ODS 7, Energía para Todos, con un cuestionario para monitoreo de usos, costos y necesidades de energía a nivel de hogar: acceso a electricidad, servicios de electricidad y sistemas de cocción (cocina y combustible). El cuestionario está basado en la metodología del Enfoque Multinivel (MTF), optimizando el tiempo de recolección y...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/hedera-collect.html",
-        "teaser":null},{
-        "title": "Interactivo",
-        
-        "excerpt":
-            "Analísis interactivo  En esa sección es posible calcular y filtrar los datos a nivel de hogar simplemente arrastrando las variables de la lista a la izquierda en la tabla a la derecha           import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf import pandas as pd from pivottablejs import pivot_ui  # institution data sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv',                  odk_data_dir + odk_survey_folder[1] +                   'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv' data_demo = sunrise.read_survey(odk_data_name) HH = odk.households(data_demo) collections = odk.overview(HH,[sunrise])  pivot_ui(HH)                                                          ",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/interact.html",
-        "teaser":null},{
-        "title": "Contexto",
-        
-        "excerpt":
-            "Reporte de Acceso a Energía El objetivo del presente proyecto es analizar el acceso a energía de una muestra de clientes de la institución de microfinanzas Fondesurco a través del uso de la herramienta HEDERA collect con el fin de extraer información relevante sobre el uso, costos asociados y atributos del acceso a electricidad y soluciones de cocina de clientes de Fondesurco en zonas rurales y remotas. Con este fin, por medio del uso de la aplicación de la herramienta de HEDERA se recogió una línea base del Objetivo de Desarrollo Sostenible 7, elaborando un primer diagnóstico del acceso a...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/intro.html",
-        "teaser":null},{
-        "title": "Metodología de piloto",
-        
-        "excerpt":
-            "Metodología  ",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/methodology.html",
-        "teaser":null},{
-        "title": "El enfoque multinivel (Multi-tier Framework)",
-        
-        "excerpt":
-            "El enfoque multinivel (Multi-tier Framework) La necesidad de medir el acceso a energía El concepto y la medición del acceso a la energía son de suma importancia para los gobiernos y las agencias de desarrollo con el fin de adaptar las políticas y los programas adecuados para alcanzar los objetivos globales. La iniciativa Energía Sostenible para Todos (SE4All) lanzada por el Secretario General de las Naciones Unidas en 2011 tiene como objetivo lograr el acceso universal a los servicios modernos de energía para 2030. El Objetivo de Desarrollo Sostenible (ODS) número 7, adoptado en 2015 por todas las naciones, tiene...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/mtf.html",
-        "teaser":null},]
-</script>
+</div>
+
+    </div>
+  </div>
+</div>
+
               <nav class="c-page__nav">
   
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/gps">
+      〈 <span class="u-margin-right-tiny"></span> Geolocalización
+    </a>
+  
 
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/e-access">
+      Acceso a Electricidad <span class="u-margin-right-tiny"></span> 〉
+    </a>
   
 </nav>
 

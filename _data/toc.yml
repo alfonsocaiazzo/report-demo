@@ -41,14 +41,17 @@
   - title: Metodología de piloto
     url: /methodology
     not_numbered: true
-  - title: Herramienta para recollección de datos
+  - title: Herramienta para recolección de datos
     url: /hedera-collect
     not_numbered: true
 
 - title: Geolocalización
   url: /gps
   not_numbered: false
-  
+
+- title: Interactivo
+  url: /interact
+  not_numbered: false
 
 - title: Acceso a Electricidad
   url: /e-access
