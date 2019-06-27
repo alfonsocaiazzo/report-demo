@@ -29,9 +29,9 @@
   "headline":
     "Search the site",
   "datePublished":
-    "2019-06-06T03:02:57-05:00",
+    "2019-06-27T07:17:06-05:00",
   "dateModified":
-    "2019-06-06T03:02:57-05:00",
+    "2019-06-27T07:17:06-05:00",
   "description":
     "Reporte de Acceso a Energía, Proyecto Piloto 2019",
   "author": {
@@ -476,7 +476,7 @@ initFunction(initQuery);
                   href="/mtf.html"
                 >
                   
-                  El enfoque multinivel (Multi-tier Framework)
+                  El enfoque multinivel (Multi-tier Framework) para medir el acceso a energía
                 </a>
 
                 
@@ -493,7 +493,7 @@ initFunction(initQuery);
                   href="/methodology.html"
                 >
                   
-                  Metodología de piloto
+                  Metodología de recolección de datos
                 </a>
 
                 
@@ -510,7 +510,7 @@ initFunction(initQuery);
                   href="/hedera-collect.html"
                 >
                   
-                  Herramienta para recolección de datos
+                  Herramienta HEDERA collect
                 </a>
 
                 
@@ -581,7 +581,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/e-access.html"
+          href="/electricity.html"
         >
           
             4.
@@ -673,7 +673,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/e-affordability.html"
+                  href="/e-reliability.html"
                 >
                   
                   Confiabilidad
@@ -906,7 +906,7 @@ initFunction(initQuery);
         "title": "Conclusiones",
         
         "excerpt":
-            "Books with Jupyter and Jekyll Jupyter Books lets you build an online book using a collection of Jupyter Notebooks and Markdown files. Its output is similar to the excellent Bookdown tool, and adds extra functionality for people running a Jupyter stack. For an example of a book built with Jupyter Books, see the textbook for Data 100 at UC Berkeley. Here are a few features of Jupyter Books All course content is written in markdown and Jupyter Notebooks, stored in notebooks/ The Jupyter Book repo comes packaged with helper scripts to convert these into Jekyll pages (in scripts/) that can...",
+            "Medición de acceso a soluciones de cocción de energía moderna ¿Está disponible el combustible cuando el hogar lo necesita para cocinar? La disponibilidad del combustible determina si el hogar debe recurrir a una segunda opción para cocinar. Distribución Calificación MTF Por oficinas Por quintiles Por género Tabla interactiva ¿Puede el hogar pagar por ambos, el combustible y la cocina / estufa? La asequibilidad del sistema de cocción está dado por la capacidad del hogar de poder pagar por el combustible y la cocina/estufa. Distribución Calificación MTF Por oficinas Por quintiles Por género Tabla interactiva ¿Qué tanto tarda el hogar en...",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/cooking.html",
@@ -922,10 +922,18 @@ initFunction(initQuery);
         "title": "Salud y Seguridad",
         
         "excerpt":
-            "Work in progress…  ",
+            "¿Es el servicio de electricidad confiable?   La confiabilidad está determinada por la cantidad de cortes del suministro de electricidad y su duración.           Distribución            Calificación MTF            Por oficinas            Por quintiles            Por género            Tabla interactiva       Distribución   Calificación MTF  ",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/e-affordability.html",
+        "teaser":null},{
+        "title": "Confiabilidad",
+        
+        "excerpt":
+            "¿Es el servicio de electricidad confiable?   La confiabilidad está determinada por la cantidad de cortes del suministro de electricidad y su duración.           import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf from pivottablejs import pivot_ui  fondesurco = hedera.mfi(2) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv',                  odk_data_dir + odk_survey_folder[1] +                   'PEPI_FONDESURCO_2_results.csv'] fondesurco.gpsFile = '../../_datasets/Fondesurco/HederaGPS/All.txt' fondesurco.data_client_file = '../../_datasets/Fondesurco/ClientDatabases/data_with_GPS_3.csv' data = fondesurco.read_survey(odk_data_name) fondesurco.HH = odk.households(data)             Distribución   Calificación MTF           fondesurco.tier_plots('E_Reliability')                                                                Por quintiles   Por género   Tabla interactiva           pivot_ui(fondesurco.HH, outfile='/Users/nataliarealpecarrillo/Documents/HEDERA/code/pepi/report-0/content/pivottablejs.html')                                                        ",
+        "categories": [],
+        "tags": [],
+        "url": "http://0.0.0.0:4000/e-reliability.html",
         "teaser":null},{
         "title": "Servicios",
         
@@ -935,6 +943,14 @@ initFunction(initQuery);
         "tags": [],
         "url": "http://0.0.0.0:4000/e-services.html",
         "teaser":null},{
+        "title": "Acceso a Electricidad",
+        
+        "excerpt":
+            "Medición de acceso a Electricidad Acceso a Servicios de Energía ¿Qué tipo de servicios de energía hacen uso los hogares según sus electrodomésticos? Categorización de servicios según aparatos ** Matriz MTF de servicios de electricidad ** Fuentes de Iluminación Posibles fuentes: luz de fuego/leña, velas, lámparas de queroseno, antorchas, lámparas de pilas recargables, sistemas domiciliarios solares, sistemas solares de iluminación, lámparas solares de áreas, lámparas solares de escritorio, lámparas solares portátiles, linternas. Distribución Calificación MTF Por oficinas Por quintiles Por género Tabla interactiva Fuentes de Electricidad Posibles fuentes: red eléctrica, mini-red eléctrica, generador díesel, batería de automóvil / motocicleta, sistemas...",
+        "categories": [],
+        "tags": [],
+        "url": "http://0.0.0.0:4000/electricity.html",
+        "teaser":null},{
         "title": "Geolocalización",
         
         "excerpt":
@@ -943,7 +959,7 @@ initFunction(initQuery);
         "tags": [],
         "url": "http://0.0.0.0:4000/gps.html",
         "teaser":null},{
-        "title": "Herramienta para recolección de datos",
+        "title": "Herramienta HEDERA collect",
         
         "excerpt":
             "La herramienta HEDERA collect La herramienta HEDERA collect es una aplicación móvil diseñada para captar la información más relevante sobre acceso a servicios básicos a nivel de hogar para medir y monitorear los Objetivos de Desarrollo Sostenible. El primer servicio básico que evalúa HEDERA collect está enfocado en el ODS 7, Energía para Todos, con un cuestionario para monitoreo de usos, costos y necesidades de energía a nivel de hogar: acceso a electricidad, servicios de electricidad y sistemas de cocción (cocina y combustible). El cuestionario está basado en la metodología del Enfoque Multinivel (MTF), optimizando el tiempo de recolección y...",
@@ -954,7 +970,7 @@ initFunction(initQuery);
         "title": "Interactivo",
         
         "excerpt":
-            "Analísis interactivo  En esa sección es posible calcular y filtrar los datos a nivel de hogar simplemente arrastrando las variables de la lista a la izquierda en la tabla a la derecha           import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf import pandas as pd from pivottablejs import pivot_ui  # institution data sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv',                  odk_data_dir + odk_survey_folder[1] +                   'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv' data_demo = sunrise.read_survey(odk_data_name) HH = odk.households(data_demo) collections = odk.overview(HH,[sunrise])  pivot_ui(HH)                                                          ",
+            "Analísis interactivo  En esa sección es posible calcular y filtrar los datos a nivel de hogar simplemente arrastrando las variables de la lista a la izquierda en la tabla a la derecha           import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf import pandas as pd from pivottablejs import pivot_ui  # institution data sunrise = hedera.mfi(1) odk_data_dir = '../../_datasets/DataODK/' odk_survey_folder = ['PEPI_19_03_19/','PEPI_FONDESURCO_19_04_17/'] odk_data_name = [odk_data_dir + odk_survey_folder[0] + 'PEPI_results.csv',                  odk_data_dir + odk_survey_folder[1] +                   'PEPI_FONDESURCO_2_results.csv'] sunrise.gpsFile = '../../_datasets/Demo/GPS.csv' data_demo = sunrise.read_survey(odk_data_name) HH = odk.households(data_demo) collections = odk.overview(HH,[sunrise])  pivot_ui(HH, outfile='/Users/nataliarealpecarrillo/Documents/HEDERA/code/pepi/report-0/content/pivottablejs.html')                                                          ",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/interact.html",
@@ -967,15 +983,15 @@ initFunction(initQuery);
         "tags": [],
         "url": "http://0.0.0.0:4000/intro.html",
         "teaser":null},{
-        "title": "Metodología de piloto",
+        "title": "Metodología de recolección de datos",
         
         "excerpt":
-            "Metodología  ",
+            "Metodología Previo al levantamiento de datos todos los involucrados - Analistas y Operador- fueron informados y entrenados sobre el uso de las herramientas. Los Analistas recibieron un video GIF a sus teléfonos celulares con el procedimiento para compartir datos GPS y el \"Operador\" encargado de las encuestas individuales, fue entrenado por medio de una videollamada para usar la herramienta HEDERA collect. El levantamiento de información fue realizado en 2 etapas: Durante la primera etapa, los Analistas recolectaron la geolocalización de los clientes en las visitas realizadas en el proceso de evaluación de crédito de los clientes. A su vez, durante...",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/methodology.html",
         "teaser":null},{
-        "title": "El enfoque multinivel (Multi-tier Framework)",
+        "title": "El enfoque multinivel (Multi-tier Framework) para medir el acceso a energía",
         
         "excerpt":
             "El enfoque multinivel (Multi-tier Framework) La necesidad de medir el acceso a energía El concepto y la medición del acceso a la energía son de suma importancia para los gobiernos y las agencias de desarrollo con el fin de adaptar las políticas y los programas adecuados para alcanzar los objetivos globales. La iniciativa Energía Sostenible para Todos (SE4All) lanzada por el Secretario General de las Naciones Unidas en 2011 tiene como objetivo lograr el acceso universal a los servicios modernos de energía para 2030. El Objetivo de Desarrollo Sostenible (ODS) número 7, adoptado en 2015 por todas las naciones, tiene...",

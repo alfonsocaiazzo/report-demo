@@ -5,7 +5,7 @@ has_widgets: false
 title: 'Geolocalización'
 prev_page:
   url: /hedera-collect
-  title: 'Herramienta para recolección de datos'
+  title: 'Herramienta HEDERA collect'
 next_page:
   url: /interact
   title: 'Interactivo'

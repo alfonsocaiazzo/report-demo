@@ -35,13 +35,13 @@
   not_numbered: false
   expand_sections: true
   sections:
-  - title: El enfoque multinivel (Multi-tier Framework)
+  - title: El enfoque multinivel (Multi-tier Framework) para medir el acceso a energía
     url: /mtf
     not_numbered: true
-  - title: Metodología de piloto
+  - title: Metodología de recolección de datos
     url: /methodology
     not_numbered: true
-  - title: Herramienta para recolección de datos
+  - title: Herramienta HEDERA collect
     url: /hedera-collect
     not_numbered: true
 
@@ -54,7 +54,7 @@
   not_numbered: false
 
 - title: Acceso a Electricidad
-  url: /e-access
+  url: /electricity
   not_numbered: false
   expand_sections: true
   sections:
@@ -71,7 +71,7 @@
     url: /e-affordability
     not_numbered: true
   - title: Confiabilidad
-    url: /e-affordability
+    url: /e-reliability
     not_numbered: true
   - title: Disponibilidad
     url: /e-affordability

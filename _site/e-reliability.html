@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Metodología de recolección de datos</title>
-  <meta name="description" content="Metodología">
+  <title>Confiabilidad</title>
+  <meta name="description" content="¿Es el servicio de electricidad confiable?">
 
-  <link rel="canonical" href="http://0.0.0.0:4000//methodology.html">
+  <link rel="canonical" href="http://0.0.0.0:4000//e-reliability.html">
   <link rel="alternate" type="application/rss+xml" title="Reporte de Acceso a Energía" href="http://0.0.0.0:4000//feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000//methodology.html" />
+  <meta property="og:url"         content="http://0.0.0.0:4000//e-reliability.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Metodología de recolección de datos" />
-<meta property="og:description" content="Metodología" />
+<meta property="og:title"       content="Confiabilidad" />
+<meta property="og:description" content="¿Es el servicio de electricidad confiable?" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000//methodology.html",
+    "http://0.0.0.0:4000//e-reliability.html",
   "headline":
-    "Metodología de recolección de datos",
+    "Confiabilidad",
   "datePublished":
     "2019-06-27T07:17:06-05:00",
   "dateModified":
     "2019-06-27T07:17:06-05:00",
   "description":
-    "Metodología",
+    "¿Es el servicio de electricidad confiable?",
   "author": {
     "@type": "Person",
     "name": "HEDERA"
@@ -489,7 +489,7 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/methodology.html"
                 >
                   
@@ -672,7 +672,7 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/e-reliability.html"
                 >
                   
@@ -900,30 +900,110 @@ initFunction(initQuery);
 </div>
 
             
+<div class="buttons">
+
+
+
+
+
+
+</div>
+
 
             <div class="c-textbook__content">
-              <h1 id="metodología">Metodología</h1>
+              <h2 id="es-el-servicio-de-electricidad-confiable">¿Es el servicio de electricidad confiable?</h2>
 
-<p>Previo al levantamiento de datos todos los involucrados - Analistas y Operador- fueron informados y entrenados sobre el uso de las herramientas. 
-Los Analistas recibieron un video GIF a sus teléfonos celulares con el procedimiento para compartir datos GPS y el "Operador" encargado de las encuestas individuales, fue entrenado por medio de una videollamada para usar la herramienta HEDERA collect.</p>
+<p>La confiabilidad está determinada por la cantidad de cortes del suministro de electricidad y su duración.</p>
 
-<p>El levantamiento de información fue realizado en 2 etapas:
-Durante la primera etapa, los Analistas recolectaron la geolocalización de los clientes en las visitas realizadas en el proceso de evaluación de crédito de los clientes. A su vez, durante esta visita se hizo la entrega al cliente de un folleto como invitación e introducción a la encuesta que realizaría Fondesurco al siguiente día en llamada telefónica.</p>
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
+<span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="s">'../../src'</span><span class="p">)))</span>
+<span class="kn">import</span> <span class="nn">hedera_types</span> <span class="k">as</span> <span class="n">hedera</span>
+<span class="kn">import</span> <span class="nn">odk_interface</span> <span class="k">as</span> <span class="n">odk</span>
+<span class="kn">import</span> <span class="nn">mtf</span>
+<span class="kn">from</span> <span class="nn">pivottablejs</span> <span class="kn">import</span> <span class="n">pivot_ui</span>
 
-<p>En la segunda etapa se ha hecho uso de los datos recolectados durante la primera etapa, puestos estos a disposición del área de Investigación &amp; Desarrollo de Fondesurco (Flor Villena Sosa) para que el Operador identificara y contactara vía telefónica a los clientes que hayan realizado un desembolso. Durante la llamada telefónica el Operador utilizó la herramienta HEDERA collect, instalada en su celular. El tamaño de muestra correspondió al número de clientes que realizaron una operación de desembolso durante el mes de marzo en las agencias seleccionadas.</p>
+<span class="n">fondesurco</span> <span class="o">=</span> <span class="n">hedera</span><span class="o">.</span><span class="n">mfi</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">odk_data_dir</span> <span class="o">=</span> <span class="s">'../../_datasets/DataODK/'</span>
+<span class="n">odk_survey_folder</span> <span class="o">=</span> <span class="p">[</span><span class="s">'PEPI_19_03_19/'</span><span class="p">,</span><span class="s">'PEPI_FONDESURCO_19_04_17/'</span><span class="p">]</span>
+<span class="n">odk_data_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_survey_folder</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">'PEPI_results.csv'</span><span class="p">,</span>
+                 <span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_survey_folder</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> 
+                 <span class="s">'PEPI_FONDESURCO_2_results.csv'</span><span class="p">]</span>
+<span class="n">fondesurco</span><span class="o">.</span><span class="n">gpsFile</span> <span class="o">=</span> <span class="s">'../../_datasets/Fondesurco/HederaGPS/All.txt'</span>
+<span class="n">fondesurco</span><span class="o">.</span><span class="n">data_client_file</span> <span class="o">=</span> <span class="s">'../../_datasets/Fondesurco/ClientDatabases/data_with_GPS_3.csv'</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fondesurco</span><span class="o">.</span><span class="n">read_survey</span><span class="p">(</span><span class="n">odk_data_name</span><span class="p">)</span>
+<span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">households</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+</div>
+
+<h3 id="distribución">Distribución</h3>
+
+<h3 id="calificación-mtf">Calificación MTF</h3>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">tier_plots</span><span class="p">(</span><span class="s">'E_Reliability'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/e-reliability_4_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/e-reliability_4_1.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
+
+<h4 id="por-quintiles">Por quintiles</h4>
+
+<h4 id="por-género">Por género</h4>
+
+<h3 id="tabla-interactiva">Tabla interactiva</h3>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pivot_ui</span><span class="p">(</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span> <span class="n">outfile</span><span class="o">=</span><span class="s">'/Users/nataliarealpecarrillo/Documents/HEDERA/code/pepi/report-0/content/pivottablejs.html'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <div class="output output_html">
+
+        <iframe width="100%" height="500" src="pivottablejs.html" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+
+    </div>
+  </div>
+</div>
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/mtf">
-      〈 <span class="u-margin-right-tiny"></span> El enfoque multinivel (Multi-tier ...
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/e-affordability">
+      〈 <span class="u-margin-right-tiny"></span> Legalidad
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/hedera-collect">
-      Herramienta HEDERA collect <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/e-affordability">
+      Disponibilidad <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

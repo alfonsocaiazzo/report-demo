@@ -7,7 +7,7 @@ prev_page:
   url: /gps
   title: 'Geolocalización'
 next_page:
-  url: /e-access
+  url: /electricity
   title: 'Acceso a Electricidad'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -39,7 +39,7 @@ data_demo = sunrise.read_survey(odk_data_name)
 HH = odk.households(data_demo)
 collections = odk.overview(HH,[sunrise])
 
-pivot_ui(HH)
+pivot_ui(HH, outfile='/Users/nataliarealpecarrillo/Documents/HEDERA/code/pepi/report-0/content/pivottablejs.html')
 
 
 ```

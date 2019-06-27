@@ -4,7 +4,7 @@ kernel_name: python3
 has_widgets: false
 title: 'Servicios'
 prev_page:
-  url: /e-access
+  url: /electricity
   title: 'Acceso a Electricidad'
 next_page:
   url: /e-affordability
