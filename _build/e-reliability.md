@@ -2,23 +2,24 @@
 interact_link: content/e-reliability.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Confiabilidad'
+title: 'CONFIABILIDAD ¿Es el servicio de electricidad confiable?'
 prev_page:
-  url: /e-affordability
-  title: 'Legalidad'
+  url: /e-legality
+  title: 'LEGALIDAD ¿Se presta el servicio de electricidad formalmente o por conexiones informales?'
 next_page:
-  url: /e-affordability
-  title: 'Disponibilidad'
+  url: /e-duration
+  title: 'DISPONIBILIDAD ¿Está disponible la fuente de energía cuando la necesita el hogar?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-## ¿Es el servicio de electricidad confiable?
+# CONFIABILIDAD ¿Es el servicio de electricidad confiable?
 
-La confiabilidad está determinada por la cantidad de cortes del suministro de electricidad y su duración. 
+TEXTO
 
+### Clasificación MTF
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 import os,sys
 here = os.path.abspath('')
@@ -38,19 +39,6 @@ fondesurco.gpsFile = '../../_datasets/Fondesurco/HederaGPS/All.txt'
 fondesurco.data_client_file = '../../_datasets/Fondesurco/ClientDatabases/data_with_GPS_3.csv'
 data = fondesurco.read_survey(odk_data_name)
 fondesurco.HH = odk.households(data)
-
-```
-</div>
-
-</div>
-
-### Distribución
-
-### Calificación MTF
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
 fondesurco.tier_plots('E_Reliability')
 ```
 </div>
@@ -59,7 +47,7 @@ fondesurco.tier_plots('E_Reliability')
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/e-reliability_4_0.png)
+![png](images/e-reliability_2_0.png)
 
 </div>
 </div>
@@ -67,42 +55,7 @@ fondesurco.tier_plots('E_Reliability')
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/e-reliability_4_1.png)
-
-</div>
-</div>
-</div>
-
-#### Por quintiles
-
-#### Por género
-
-### Tabla interactiva
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-pivot_ui(fondesurco.HH, outfile='/Users/nataliarealpecarrillo/Documents/HEDERA/code/pepi/report-0/content/pivottablejs.html')
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-
-<div markdown="0" class="output output_html">
-
-        <iframe
-            width="100%"
-            height="500"
-            src="pivottablejs.html"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
-        
-</div>
-
+![png](images/e-reliability_2_1.png)
 
 </div>
 </div>

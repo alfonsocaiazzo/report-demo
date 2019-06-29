@@ -24,9 +24,9 @@ description: >-
 
 baseurl: /               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 # Note: if the online version is created in github, it takes the name of the book as sub-domain
-url: https://alfonsocaiazzo.github.io/ # the base hostname & protocol for your site, e.g. http://example.com 
+url: https://hedera-online.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 # Note: 'url' is used only in the online version!
-# in github, it becomes https://alfonsocaiazzo.github.io/report-demo/
+# in github, it becomes https://hedera-online.github.io/HEDERAreportBook/
   
 #######################################################################################
 # Jupyter Book settings

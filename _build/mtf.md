@@ -1,14 +1,18 @@
 ---
+interact_link: content/mtf.ipynb
+kernel_name: python3
+has_widgets: false
 title: 'El enfoque multinivel (Multi-tier Framework) para medir el acceso a energía'
 prev_page:
   url: /intro
-  title: 'Contexto'
+  title: 'Introducción'
 next_page:
   url: /methodology
   title: 'Metodología de recolección de datos'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-# El enfoque multinivel (Multi-tier Framework)
+
+# Medir el acceso a energía: El enfoque multinivel (Multi-tier Framework)
 
 ## La necesidad de medir el acceso a energía
 
@@ -60,3 +64,11 @@ Los datos sobre el acceso a la energía para cocinar tales como la ventilación,
 * **Seguridad:** ¿Es seguro usar la cocina o se expone la persona a posibles accidentes? ¿Han ocurrido accidentes en el pasado debido al uso del combustible?
 
 Las normas para la medición de los múltiples atributos para describir el acceso a sistemas de cocción de los hogares se resumen en la siguiente tabla (Tabla 3). **El nivel más bajo entre todos los atributos determina el acceso general al nivel de cocina para el hogar**. Se puede calcular un índice de acceso de los hogares a las soluciones de cocción para cualquier área geográfica dada como el promedio de los niveles en todos los hogares en esa área, ajustado a una escala de 100.
+
+
+
+
+
+
+
+
