@@ -2,10 +2,10 @@
 interact_link: content/c-conclusions.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'RECOMENDACIONES'
+title: 'CONCLUSIONS'
 prev_page:
   url: /c-safety
-  title: 'SEGURIDAD ¿El sistema de cocina es seguro o se expone el hogar a posibles accidentes?'
+  title: 'SAFETY - Is the cooking solution (stove and fuel) safe?'
 next_page:
   url: http://hedera.online
   title: 'HEDERA'

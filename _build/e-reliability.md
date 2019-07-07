@@ -2,13 +2,13 @@
 interact_link: content/e-reliability.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'CONFIABILIDAD ¿Es el servicio de electricidad confiable?'
+title: 'RELIABILITY - Is the energy provided reliable?'
 prev_page:
-  url: /e-legality
-  title: 'LEGALIDAD ¿Se presta el servicio de electricidad formalmente o por conexiones informales?'
+  url: /e-capacity
+  title: 'Capacity - If the capacity enough to satisfy household needs?'
 next_page:
   url: /e-duration
-  title: 'DISPONIBILIDAD ¿Está disponible la fuente de energía cuando la necesita el hogar?'
+  title: 'DURATION - How many hours if electricity available?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

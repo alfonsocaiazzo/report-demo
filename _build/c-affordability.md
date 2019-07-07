@@ -2,13 +2,13 @@
 interact_link: content/c-affordability.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'ASEQUIBILIDAD ¿Pueden los hogares permitirse pagar por la cocina y el combustible?'
+title: 'AFFORDABILITY - Is the fuel affordable?'
 prev_page:
   url: /c-convenience
-  title: 'CONVENIENCIA ¿Qué tanto tarda el hogar en conseguir y preparar el combustible y la cocina?'
+  title: 'CONVENCIENCE -  How much time is needed to fetch fuel and prepare the stove?'
 next_page:
   url: /c-availability
-  title: 'DISPONIBILIDAD ¿Está disponible el combustible durante el año?'
+  title: 'AVAILABILITY - Is the cooking fuel available throughout the year?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

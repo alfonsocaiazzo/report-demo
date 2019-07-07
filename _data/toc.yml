@@ -1,27 +1,32 @@
 
 # Adds a searchbar link
-- title: Buscar
+- title: Search
   search: true
 
 # Divider for meta-pages and content page
 - divider: true
 
-- title: Introducción
+- title: Introduction
   url: /intro
   not_numbered: true
   expand_sections: true
   sections:
-  - title: El enfoque multinivel (Multi-tier Framework) para medir el acceso a energía
+  - title: The Multi-tier Framework for Measuring Energy Access
     url: /mtf
     not_numbered: true
-  - title: Metodología de recolección de datos
+  - title: Methodology
     url: /methodology
     not_numbered: true
-  - title: Herramienta HEDERA collect
+  - title: The App HEDERA collect
     url: /collect
     not_numbered: true
 
-- title: Geolocalización
+- title: Executive Summary
+  url: /summary
+  not_numbered: true
+  expand_sections: true
+
+- title: Interactive - Map View 
   url: /gps
   not_numbered: true
   expand_sections: true
@@ -29,101 +34,89 @@
 # Divider for meta-pages and content page
 - divider: true
 
-- header: Acceso a Electricidad
+- header: Access to Electricity
 
-- title: Fuentes de Energía
+- title: Electricity Sources
   url: /e-sources
   not_numbered: true
   expand_sections: true
 
-- title: Servicios de Energía
+- title: Energy Services & Appliances
   url: /e-services
   not_numbered: true
   expand_sections: true
 
-- title: CAPACIDAD ¿Es la capacidad del suministro de electricidad suficiente para los servicios de energía de los hogares?
-  url: /e-capacity
-  not_numbered: true
-  expand_sections: true
-
-- title: ASEQUIBILIDAD ¿Pueden los hogares permitirse la compra de electricidad?
+- title: AFFORDABILITY - Is the energy affordable?
   url: /e-affordability
   not_numbered: true
   expand_sections: true
 
-- title: LEGALIDAD ¿Se presta el servicio de electricidad formalmente o por conexiones informales?
-  url: /e-legality
-  not_numbered: true
-  expand_sections: true
-
-- title: CONFIABILIDAD ¿Es el servicio de electricidad confiable?
-  url: /e-reliability
-  not_numbered: true
-  expand_sections: true
-
-- title: DISPONIBILIDAD ¿Está disponible la fuente de energía cuando la necesita el hogar?
-  url: /e-duration
-  not_numbered: true
-  expand_sections: true
-
-- title: CALIDAD ¿La fluctuación del voltaje avería los electrodomésticos?
+- title: QUALITY - Does voltage fluctuation affect appliances?
   url: /e-quality
   not_numbered: true
   expand_sections: true
 
-- title: SEGURIDAD ¿Es seguro usar el servicio de electricidad o está el hogar arriesgando su salud?
+- title: Capacity - If the capacity enough to satisfy household needs?
+  url: /e-capacity
+  not_numbered: true
+  expand_sections: true
+
+- title: RELIABILITY - Is the energy provided reliable?
+  url: /e-reliability
+  not_numbered: true
+  expand_sections: true
+
+- title: DURATION - How many hours if electricity available? 
+  url: /e-duration
+  not_numbered: true
+  expand_sections: true
+
+- title: LEGALITY - Is the access to energy formal (legal) or informal?
+  url: /e-legality
+  not_numbered: true
+  expand_sections: true
+
+- title: SAFETY - Is the energy safe?
   url: /e-safety
   not_numbered: true
   expand_sections: true
 
-- title: RECOMENDACIONES
-  url: /e-services
+
+# Divider for meta-pages and content page
+- divider: true
+
+- header: Access to Modern Cooking Solutions
+
+- title: Cooking Solutions
+  url: /c-solutions
+  not_numbered: true
+  expand_sections: true
+
+- title: CONVENCIENCE -  How much time is needed to fetch fuel and prepare the stove?
+  url: /c-convenience
+  not_numbered: true
+  expand_sections: true
+
+- title: AFFORDABILITY - Is the fuel affordable?
+  url: /c-affordability
+  not_numbered: true
+  expand_sections: true
+
+- title: AVAILABILITY - Is the cooking fuel available throughout the year?
+  url: /c-availability
+  not_numbered: true
+  expand_sections: true
+
+- title: SAFETY - Is the cooking solution (stove and fuel) safe?
+  url: /c-safety
   not_numbered: true
   expand_sections: true
 
 # Divider for meta-pages and content page
 - divider: true
 
-- header: Acceso a Soluciones de Cocción
-
-- title: Soluciones de cocción
-  url: /c-solutions
-  not_numbered: true
-  expand_sections: true
-
-  sections:
-  - title: 2.1 Tipos de cocinas
-    url: /02-1
-    not_numbered: true
-  - title: 2.2 Cantidad de cocinas
-    url: /02-2
-    not_numbered: true
-  - title: 2.3 Combustibles de cocinas
-    url: /02-3
-    not_numbered: true
-
-- title: CONVENIENCIA ¿Qué tanto tarda el hogar en conseguir y preparar el combustible y la cocina?
-  url: /c-convenience
-  not_numbered: true
-  expand_sections: true
-
-- title: ASEQUIBILIDAD ¿Pueden los hogares permitirse pagar por la cocina y el combustible?
-  url: /c-affordability
-  not_numbered: true
-  expand_sections: true
-
-- title: DISPONIBILIDAD ¿Está disponible el combustible durante el año?
-  url: /c-availability
-  not_numbered: true
-  expand_sections: true
-
-- title: SEGURIDAD ¿El sistema de cocina es seguro o se expone el hogar a posibles accidentes?
-  url: /c-safety
-  not_numbered: true
-  expand_sections: true
-
-- title: RECOMENDACIONES
-  url: /c-conclusions
+- title: CONCLUSIONS
+  url: /conclusions
   not_numbered: true
   expand_sections: true
 

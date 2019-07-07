@@ -2,13 +2,13 @@
 interact_link: content/e-safety.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'SEGURIDAD ¿Es seguro usar el servicio de electricidad o está el hogar arriesgando su salud?'
+title: 'SAFETY - Is the energy safe?'
 prev_page:
-  url: /e-quality
-  title: 'CALIDAD ¿La fluctuación del voltaje avería los electrodomésticos?'
+  url: /e-legality
+  title: 'LEGALITY - Is the access to energy formal (legal) or informal?'
 next_page:
-  url: /e-services
-  title: 'RECOMENDACIONES'
+  url: /c-solutions
+  title: 'Cooking Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

@@ -2,23 +2,26 @@
 interact_link: content/methodology.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Metodología de recolección de datos'
+title: 'Methodology'
 prev_page:
   url: /mtf
-  title: 'El enfoque multinivel (Multi-tier Framework) para medir el acceso a energía'
+  title: 'The Multi-tier Framework for Measuring Energy Access'
 next_page:
   url: /collect
-  title: 'Herramienta HEDERA collect'
+  title: 'The App HEDERA collect'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-# Metodología de recolección de datos
+# Data collection
 
-Previo al levantamiento de datos todos los involucrados - Analistas y Operador- fueron informados y entrenados sobre el uso de las herramientas. 
-Los Analistas recibieron un video GIF a sus teléfonos celulares con el procedimiento para compartir datos GPS y el &quot;Operador&quot; encargado de las encuestas individuales, fue entrenado por medio de una videollamada para usar la herramienta HEDERA collect.
+Household data can be efficiently collected using the mobile survey integrated in HEDERA collect. The survey optimizes the ESMAP Energy Survey based on the Multi-tier framework, and can be efficiently completed in less than 15 minutes. 
 
-El levantamiento de información fue realizado en 2 etapas:
-Durante la primera etapa, los Analistas recolectaron la geolocalización de los clientes en las visitas realizadas en el proceso de evaluación de crédito de los clientes. A su vez, durante esta visita se hizo la entrega al cliente de un folleto como invitación e introducción a la encuesta que realizaría Fondesurco al siguiente día en llamada telefónica.
+HEDERA offers two approaches for data collection
 
-En la segunda etapa se ha hecho uso de los datos recolectados durante la primera etapa, puestos estos a disposición del área de Investigación & Desarrollo de Fondesurco (Flor Villena Sosa) para que el Operador identificara y contactara vía telefónica a los clientes que hayan realizado un desembolso. Durante la llamada telefónica el Operador utilizó la herramienta HEDERA collect, instalada en su celular. El tamaño de muestra correspondió al número de clientes que realizaron una operación de desembolso durante el mes de marzo en las agencias seleccionadas.
+* **In Person** (the App is used by loan officers during household visits)
 
+* **Combination of in person and telephon interview** (the App is used by both loan officers, for example to record GPS, and by employees interviewing the clients by telephone). This approach was used in the pilot project with
+[Cooperativa Fondesurco](http://hedera.online/case_studies/fondesurco.html)
+
+
+In both cases, collected client data can be integrated into exiting databases available at the institution, in order to perform analysis including demographic, social, and credit historical data

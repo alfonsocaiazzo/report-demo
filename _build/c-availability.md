@@ -2,13 +2,13 @@
 interact_link: content/c-availability.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'DISPONIBILIDAD ¿Está disponible el combustible durante el año?'
+title: 'AVAILABILITY - Is the cooking fuel available throughout the year?'
 prev_page:
   url: /c-affordability
-  title: 'ASEQUIBILIDAD ¿Pueden los hogares permitirse pagar por la cocina y el combustible?'
+  title: 'AFFORDABILITY - Is the fuel affordable?'
 next_page:
   url: /c-safety
-  title: 'SEGURIDAD ¿El sistema de cocina es seguro o se expone el hogar a posibles accidentes?'
+  title: 'SAFETY - Is the cooking solution (stove and fuel) safe?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

@@ -2,68 +2,46 @@
 interact_link: content/mtf.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'El enfoque multinivel (Multi-tier Framework) para medir el acceso a energía'
+title: 'The Multi-tier Framework for Measuring Energy Access'
 prev_page:
   url: /intro
-  title: 'Introducción'
+  title: 'Introduction'
 next_page:
   url: /methodology
-  title: 'Metodología de recolección de datos'
+  title: 'Methodology'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-# Medir el acceso a energía: El enfoque multinivel (Multi-tier Framework)
+# Measuring Energy Access: the Multi-Tier Framrwork
 
-## La necesidad de medir el acceso a energía
+## The importance of measuring energy access
 
-El concepto y la medición del acceso a la energía son de suma importancia para los gobiernos y las agencias de desarrollo con el fin de adaptar las políticas y los programas adecuados para alcanzar los objetivos globales. La iniciativa Energía Sostenible para Todos (SE4All) lanzada por el Secretario General de las Naciones Unidas en 2011 tiene como objetivo lograr el acceso universal a los servicios modernos de energía para 2030. El Objetivo de Desarrollo Sostenible (ODS) número 7, adoptado en 2015 por todas las naciones, tiene como meta: garantizar el acceso a una energía asequible, segura, sostenible y moderna para todos para el 2030. En todo el mundo, se estima que más de dos mil millones de personas carecen de acceso a la energía moderna.
+The concept and measurement of access to energy are of utmost importance to governments and development agencies in order to adapt the appropriate policies and programs to achieve global objectives. The Sustainable Energy for All initiative (SE4All) launched by the Secretary General of the United Nations in 2011 aims to achieve universal access to modern energy services by 2030. The [Sustainable Development Goal (SDG) number 7](https://sustainabledevelopment.un.org/sdg7), adopted in 2015 by all nations, aims to: ensure access to affordable, safe, sustainable and modern energy for all by 2030. Worldwide, it is estimated that more than two billion people lack access to modern energy.
 
-Para monitorear el progreso hacia los objetivos de acceso a energía para todos, el Programa de Asistencia a la Gestión del Sector Energético (Energy Sector Management Assistance Program (ESMAP)) del Banco Mundial y la Agencia Internacional de Energía han liderado un consorcio de 23 agencias internacionales para establecer el Marco de Seguimiento Global de la SE4All (Global Track Framework  - GTF) que describe cómo medir la línea de base y el progreso hacia las metas de la SE4All mediante la recopilación de datos de energía con regularidad.
+To monitor progress towards the goals of access to energy for all, the Energy Sector Management Assistance Program (ESMAP) of the World Bank and the International Energy Agency have led a consortium of 23 agencies international guidelines to establish the Global Monitoring Framework of the SE4All (Global Track Framework - GTF) that describes how to measure the baseline and progress towards the goals of the SE4All by collecting energy data regularly.
 
-El ESMAP, bajo la iniciativa SE4ALL, en consulta con múltiples socios de desarrollo, ha desarrollado el Enfoque Multi-nivel (**Multi-Tier Framework (MTF)**) para monitorear y evaluar el acceso a la energía siguiendo una metodología multidimensional.
+ESMAP, under the SE4ALL initiative, in consultation with multiple development partners, has developed the [Multi-Tier Framework](https://www.esmap.org/node/55526) (MTF) to monitor and evaluate access to energy following a multidimensional methodology.
 
-## La nueva definición de acceso a energía
+## A multidimensional, definition of access to energy
 
-El MTF redefine el acceso a la energía de la contabilización binaria tradicional (*conectado o no conectado; cocinando con leña o no*) a una definición multidimensional como **la capacidad de aprovechar la energía adecuada, disponible cuando sea necesario, confiable, de buena calidad, conveniente, asequible, legal, saludable y segura para todos los servicios de energía requeridos**. 
+The MTF redefines the access to energy from traditional binary accounting (*connected or not connected, cooking with firewood or not*) to a multidimensional definition such as **the ability to take advantage of adequate energy, available when necessary, reliable, good quality, convenient, affordable, legal, healthy and safe for all required energy services**.
 
-Es decir, tener una conexión eléctrica no significa necesariamente tener acceso a la electricidad según la nueva definición, sino que también tiene en cuenta otros aspectos, como, por ejemplo, la confiabilidad, la asequibilidad, entre otros atributos.  Así, el acceso a la energía se mide en el espectro de niveles, desde el Nivel 0 (*tier 0*) (sin acceso) al Nivel 5 (*tier 5*) (el nivel más alto de acceso).
-
-
-### Matriz de evaluación de acceso a electricidad a nivel de hogar
-
-El acceso a la electricidad se mide con base en estándares (atributos) de múltiples niveles, neutrales a la tecnología. Los umbrales sucesivos de estos atributos que están asociados al suministro, permiten un mayor uso de los aparatos eléctricos. Los atributos relevantes para evaluar la electricidad de los hogares estimados por la metodología MTF son: 
-
-* **Capacidad:** Qué electrodomésticos puede utilizar el hogar?
-* **Disponibilidad (incluidos el suministro diario y el suministro nocturno):** ¿Está disponible la fuente de energía cuando lo necesita el hogar? 
-* **Confiabilidad:**  ¿Es el servicio de electricidad interrumpido con frecuencia?
-* **Calidad:** ¿La fluctuación del voltaje avería los electrodomésticos?
-* **Asequibilidad:** ¿Puede el hogar permitirse comprar la cantidad mínima de electricidad?
-* **Legalidad:** ¿Se presta el servicio formalmente o por conexiones informales?
-* **Salud y seguridad:** ¿Es seguro usar el servicio de electricidad o está el hogar arriesgando su salud si usa el servicio?
-
-Cada atributo se evalúa por separado y el nivel general para el acceso del hogar a la electricidad se calcula aplicando el nivel más bajo obtenido en cualquiera de los atributos. Es decir, el atributo con la calificación más baja determina el nivel de acceso del hogar. 
+That is, having an electrical connection does not necessarily mean having access to electricity according to the new definition, but it also takes into account other aspects, such as, for example, reliability, affordability, among other attributes. Thus, access to energy is measured in the spectrum of levels, from Level 0 (*tier 0*) (without access) to Level 5 (*tier5*) (the highest level of access).
 
 
-### Matriz de evaluación de acceso a servicios de electricidad
+### Ranking matrix to evaluate household energy access
 
-La metodología MTF define un marco separado para medir el acceso a los servicios de electricidad. Una mejora gradual del suministro de electricidad permite un mayor y mejor acceso a diferentes electrodomésticos para diferentes necesidades. Así, en una segunda matriz que mide el acceso a los servicios de electricidad, la categorización va de acuerdo según el tipo de aparatos utilizados en el hogar (Tabla 2). Es posible que un hogar obtenga calificaciones de diferentes niveles a través del acceso al suministro de electricidad y el acceso a los servicios de electricidad, lo que refleja la disponibilidad de electrodomésticos a pesar del suministro deficiente o la incapacidad para comprar aparatos (o un alto consumo de electricidad) a pesar del suministro adecuado.
+Access to electricity is measured based on standards (attributes) of multiple levels, independent from the energy technology. The successive thresholds of these attributes that are associated with the supply, allow a greater use of electrical appliances. The relevant attributes to evaluate the electricity of the households estimated by the MTF methodology are:
 
-### Evaluación de acceso a energía moderna para el sistema de cocción del hogar
+* **Capacity:** What appliances can the household use?
+* **Duration (including daily supply and night supply):** Is the power source available when the household needs it?
+* **Reliability:** Is electricity service interrupted frequently?
+* **Quality:** Does the fluctuation of the voltage damage the appliances?
+* **Affordability:** Can the household afford to buy the minimum amount of electricity?
+* **Legality:** Is the service provided formally or informally?
+* **Health and Safety:** Is it safe to use electricity service or are the household members risking your health if you use the service?
 
-El marco de múltiples niveles para la medición del acceso a la energía para cocinar se basa en siete atributos: 
-(i) salud (basado en la contaminación del aire interior), (ii) conveniencia (basado en el tiempo de recolección de combustible y tiempo de preparación de la estufa), (iii) seguridad, (iv) asequibilidad (incluido el gasto en estufas y combustible), (v) eficiencia, (vi) calidad y (vii) disponibilidad. En esta metodología un sistema de cocción hace referencia a la combinación de una estufa y un tipo de combustible para cocinar. Un sistema de cocción incluye todas las soluciones de cocción que se utilizan, así como el lugar de cocción y la ventilación.
-
-
-Los datos sobre el acceso a la energía para cocinar tales como la ventilación, la calidad del combustible utilizado, la conveniencia, la disponibilidad y la asequibilidad pueden recopilarse a través de las encuestas a los hogares. Otros parámetros, como la calidad del aire interior y la eficiencia, se pueden medir mejor a través de los datos del lado de la oferta basados en pruebas de laboratorio o mediante la estimación basada en modelos matemáticos.
-
-
-* **Asequibilidad:** ¿Puede el hogar pagar por ambos, la cocina y el combustible?
-* **Conveniencia:** ¿Qué tanto tarda el hogar en conseguir y preparar el combustible y la cocina antes que una persona del hogar pueda cocinar?
-* **Disponibilidad:** ¿Está disponible el combustible cuando el hogar lo necesita para cocinar?
-* **Calidad:** ¿La calidad del combustible afecta la cocción?
-* **Seguridad:** ¿Es seguro usar la cocina o se expone la persona a posibles accidentes? ¿Han ocurrido accidentes en el pasado debido al uso del combustible?
-
-Las normas para la medición de los múltiples atributos para describir el acceso a sistemas de cocción de los hogares se resumen en la siguiente tabla (Tabla 3). **El nivel más bajo entre todos los atributos determina el acceso general al nivel de cocina para el hogar**. Se puede calcular un índice de acceso de los hogares a las soluciones de cocción para cualquier área geográfica dada como el promedio de los niveles en todos los hogares en esa área, ajustado a una escala de 100.
+Each attribute is evaluated separately and the general level for household access to electricity is calculated by applying the lowest level obtained in any of the attributes. That is, the attribute with the lowest rating determines the household energy access level (tier).
 
 
 
@@ -72,3 +50,41 @@ Las normas para la medición de los múltiples atributos para describir el acces
 
 
 
+
+<p>
+        <img src="./images/MTF-electricitysupply.png" alt="image" style="width:80.0%" />
+ </p>
+
+### Ranking matrix to evaluate  access to energy services
+
+The MTF methodology defines a separate framework for measuring access to electricity services. A gradual improvement of the electricity supply allows greater and better access to different appliances for different needs. Thus, in a second matrix that measures access to electricity services, the categorization is according to the type of appliances used in the home. A household may obtain ratings at different levels through access to electricity supply and access to electricity services, reflecting the availability of appliances despite poor supply or inability to purchase appliances (or high consumption) of electricity) despite the adequate supply.
+
+
+
+
+
+
+<p>
+        <img src="./images/MTF-electricityservices.png" alt="image" style="width:80.0%" />
+ </p>
+
+### Ranking matrix to evaluate access to modern cooking solutions
+
+The multi-level framework for measuring access to cooking energy is based on seven attributes:
+(i) health (based on indoor air pollution), (ii) convenience (based on fuel collection time and stove preparation time), (iii) safety, (iv) affordability (including spending on stoves and fuel), (v) efficiency, (vi) quality and (vii) availability. In this methodology, a cooking system refers to the combination of a stove and a type of cooking fuel. A cooking system includes all the cooking solutions that are used, as well as the place of cooking and ventilation.
+
+
+Data on access to cooking energy such as ventilation, the quality of the fuel used, convenience, availability and affordability can be collected through household surveys. Other parameters, such as indoor air quality and efficiency, can be better measured through supply side data based on laboratory tests or estimation based on mathematical models.
+
+
+* **Affordability:** Can the household pay for both the kitchen and the fuel?
+* **Convenience:** How long does it take the household to get and prepare fuel and cooking before a person in the household can cook?
+* **Availability:** Is the fuel available when the home needs it to cook?
+* **Quality:** Does the quality of the fuel affect cooking?
+* **Security:** Is it safe to use the kitchen or is the person exposed to possible accidents? Have accidents occurred in the past due to the use of fuel?
+
+The standards for the measurement of multiple attributes to describe access to cooking systems of households are summarized in the following table. **The lowest level among all the attributes determines the general access to the kitchen level for the home**. 
+
+<p>
+        <img src="./images/MTF-cookingsolutions.png" alt="image" style="width:80.0%" />
+ </p>

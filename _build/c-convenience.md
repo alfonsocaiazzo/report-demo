@@ -2,13 +2,13 @@
 interact_link: content/c-convenience.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'CONVENIENCIA ¿Qué tanto tarda el hogar en conseguir y preparar el combustible y la cocina?'
+title: 'CONVENCIENCE -  How much time is needed to fetch fuel and prepare the stove?'
 prev_page:
-  url: /02-3
-  title: '2.3 Combustibles de cocinas'
+  url: /c-solutions
+  title: 'Cooking Solutions'
 next_page:
   url: /c-affordability
-  title: 'ASEQUIBILIDAD ¿Pueden los hogares permitirse pagar por la cocina y el combustible?'
+  title: 'AFFORDABILITY - Is the fuel affordable?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

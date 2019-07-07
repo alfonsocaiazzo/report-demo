@@ -2,13 +2,13 @@
 interact_link: content/c-solutions.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Soluciones de cocción'
+title: 'Cooking Solutions'
 prev_page:
-  url: /e-services
-  title: 'RECOMENDACIONES'
+  url: /e-safety
+  title: 'SAFETY - Is the energy safe?'
 next_page:
-  url: /02-1
-  title: '2.1 Tipos de cocinas'
+  url: /c-convenience
+  title: 'CONVENCIENCE -  How much time is needed to fetch fuel and prepare the stove?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

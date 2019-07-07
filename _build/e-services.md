@@ -2,24 +2,24 @@
 interact_link: content/e-services.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'RECOMENDACIONES'
+title: 'Energy Services & Appliances'
 prev_page:
-  url: /e-safety
-  title: 'SEGURIDAD ¿Es seguro usar el servicio de electricidad o está el hogar arriesgando su salud?'
+  url: /e-sources
+  title: 'Electricity Sources'
 next_page:
-  url: /c-solutions
-  title: 'Soluciones de cocción'
+  url: /e-affordability
+  title: 'AFFORDABILITY - Is the energy affordable?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-# Servicios de Energía
+# Energy Services
 
-Según los aparatos que disponga y haga uso el hogar, se clasifican estos siguiendo la matriz de evaluación del MTF.
+¿Qué tipos de servicios de energía tienen acceso los hogares según sus electrodomésticos?
 
-### Clasificación MTF
+
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area hidecode" markdown="1">
+<div class="input_area" markdown="1">
 ```python
 import os,sys
 here = os.path.abspath('')
@@ -27,7 +27,9 @@ sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src')))
 import hedera_types as hedera
 import odk_interface as odk
 import mtf
-from pivottablejs import pivot_ui
+import matplotlib.pyplot as plt
+plt.rcParams["font.family"] = "Tw Cen MT"
+plt.rcParams.update({'font.size': 20})
 
 fondesurco = hedera.mfi(2)
 odk_data_dir = '../../_datasets/DataODK/'
@@ -39,35 +41,23 @@ fondesurco.gpsFile = '../../_datasets/Fondesurco/HederaGPS/All.txt'
 fondesurco.data_client_file = '../../_datasets/Fondesurco/ClientDatabases/data_with_GPS_3.csv'
 data = fondesurco.read_survey(odk_data_name)
 fondesurco.HH = odk.households(data)
-fondesurco.tier_plots('E_Services')
 ```
 </div>
 
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-{:.output_png}
-![png](images/e-services_2_0.png)
-
-</div>
-</div>
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-{:.output_png}
-![png](images/e-services_2_1.png)
-
-</div>
-</div>
 </div>
 
-## Análisis interactivo
+## Clasificación MTF
+
+Según los aparatos que disponga y haga uso el hogar, se clasifican estos siguiendo la matriz de evaluación del MTF.
+
+Las aplicaciones encontradas en el campo reflejan el limitado uso de servicios eléctricos usados en la región. La mayoría de los hogares se caracterizan por consumir poca electricidad. Un cuarto de la muestra, además de los aparatos de comunicación y entretenimiento, también cuenta con electrodomésticos como la plancha y licuadora de mayor consumo de energía. Solo 4 hogares reportaron tener duchas eléctricas para calentar el agua al bañarse.
+
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
-pivot_ui(fondesurco.HH, outfile='/Users/nataliarealpecarrillo/Documents/HEDERA/code/pepi/report-0/content/pivottablejs.html')
 
+fondesurco.tier_plots('E_Services',legend=True)
 
 ```
 </div>
@@ -75,21 +65,25 @@ pivot_ui(fondesurco.HH, outfile='/Users/nataliarealpecarrillo/Documents/HEDERA/c
 <div class="output_wrapper" markdown="1">
 <div class="output_subarea" markdown="1">
 
+{:.output_png}
+![png](images/e-services_3_0.png)
 
-
-<div markdown="0" class="output output_html">
-
-        <iframe
-            width="100%"
-            height="500"
-            src="pivottablejs.html"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
-        
 </div>
+</div>
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
 
+{:.output_png}
+![png](images/e-services_3_1.png)
 
 </div>
 </div>
 </div>
+
+## Appliances
+ 
+Casi el 50% de los hogares cuentan sola- mente con celulares, iluminación, radio y televisor.
+
+ 
+Después de la iluminación y los teléfonos celulares, más de la mitad de los hogares tienen radio y televisor a color. Electrodomésticos que facilitan labores del hogar como la lavadora o lavavajillas fueron de mínima ocurrencia. Menos del 20% usan refrigeradora, encontrada en todas las oficinas en similar proporción, quien después de la plancha y la licuadora, son los electrodomésticos encontrados más frecuentemente en el campo. Los dos casos de hogares usando velas, no contaban con ninguna aplicación alimentada por otra fuente de energía. La percepción de los hogares con respecto a los aparatos que más consumen indicaron que los televisores (55%), los refrigeradores (15%), y los radios (10%), son aquellos que, según su percepción, más afectan los recibos de luz.
+

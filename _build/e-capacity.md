@@ -2,13 +2,13 @@
 interact_link: content/e-capacity.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'CAPACIDAD ¿Es la capacidad del suministro de electricidad suficiente para los servicios de energía de los hogares?'
+title: 'Capacity - If the capacity enough to satisfy household needs?'
 prev_page:
-  url: /e-services
-  title: 'Servicios de Energía'
+  url: /e-quality
+  title: 'QUALITY - Does voltage fluctuation affect appliances?'
 next_page:
-  url: /e-affordability
-  title: 'ASEQUIBILIDAD ¿Pueden los hogares permitirse la compra de electricidad?'
+  url: /e-reliability
+  title: 'RELIABILITY - Is the energy provided reliable?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

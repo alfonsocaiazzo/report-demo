@@ -2,13 +2,13 @@
 interact_link: content/e-quality.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'CALIDAD ¿La fluctuación del voltaje avería los electrodomésticos?'
+title: 'QUALITY - Does voltage fluctuation affect appliances?'
 prev_page:
-  url: /e-duration
-  title: 'DISPONIBILIDAD ¿Está disponible la fuente de energía cuando la necesita el hogar?'
+  url: /e-affordability
+  title: 'AFFORDABILITY - Is the energy affordable?'
 next_page:
-  url: /e-safety
-  title: 'SEGURIDAD ¿Es seguro usar el servicio de electricidad o está el hogar arriesgando su salud?'
+  url: /e-capacity
+  title: 'Capacity - If the capacity enough to satisfy household needs?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

@@ -2,13 +2,13 @@
 interact_link: content/collect.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Herramienta HEDERA collect'
+title: 'The App HEDERA collect'
 prev_page:
   url: /methodology
-  title: 'Metodología de recolección de datos'
+  title: 'Methodology'
 next_page:
-  url: /gps
-  title: 'Geolocalización'
+  url: /summary
+  title: 'Executive Summary'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

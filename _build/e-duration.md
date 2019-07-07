@@ -2,13 +2,13 @@
 interact_link: content/e-duration.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'DISPONIBILIDAD ¿Está disponible la fuente de energía cuando la necesita el hogar?'
+title: 'DURATION - How many hours if electricity available?'
 prev_page:
   url: /e-reliability
-  title: 'CONFIABILIDAD ¿Es el servicio de electricidad confiable?'
+  title: 'RELIABILITY - Is the energy provided reliable?'
 next_page:
-  url: /e-quality
-  title: 'CALIDAD ¿La fluctuación del voltaje avería los electrodomésticos?'
+  url: /e-legality
+  title: 'LEGALITY - Is the access to energy formal (legal) or informal?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

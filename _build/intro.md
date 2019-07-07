@@ -2,31 +2,31 @@
 interact_link: content/intro.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Introducción'
+title: 'Introduction'
 prev_page:
   url: 
   title: ''
 next_page:
   url: /mtf
-  title: 'El enfoque multinivel (Multi-tier Framework) para medir el acceso a energía'
+  title: 'The Multi-tier Framework for Measuring Energy Access'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-# Introducción
+# Introduction
 
-## Reporte de Acceso a Energía
+## Energy Access Report
 
-El objetivo del presente proyecto es analizar el acceso a energía de una muestra de clientes de la institución de microfinanzas <strong>Fondesurco</strong> a través del uso de la herramienta HEDERA collect con el fin de extraer información relevante sobre el uso, costos asociados y atributos del acceso a electricidad y soluciones de cocina de clientes de Fondesurco en zonas rurales y remotas. 
-Con este fin, por medio del uso de la aplicación de la herramienta de HEDERA se recogió una línea base del Objetivo de Desarrollo Sostenible 7, elaborando un primer diagnóstico del acceso a energía siguiendo los estándares de métricas internacionales, la metodología del “Enfoque Multinivel (Multi-Tier Framework (MTF))” desarrollado por el Banco Mundial y del Índice de Progreso fuera de la Pobreza Energética (Progress out of Energy Poverty Index (PEPI)) [N. Realpe, PhD Thesis 2017](https://depositonce.tu-berlin.de/handle/11303/6708)
+The objective of this project is to analyze the access to energy of a sample of clients of a microfinance institution with the HEDERA Impact Toolkit Software. 
+Relevant information concerning the use, associated costs and several attributes describing access to electricity and cooking solutions has been collected the customers of the financial institution in rural and remote areas
+using the App HEDERA collect.
+The HEDERA Impact Toolkit allows to efficiently evaluating a baseline for monitoring progress towards Sustainable Development Goal 7 following the [Multi-tier Framework](https://www.esmap.org/node/55526) (MTF), recently established by The World Bank, and the
+Progress out of Energy Poverty Index (PEPI) [N. Realpe, PhD Thesis 2017](https://depositonce.tu-berlin.de/handle/11303/6708)
 
-
-## Fondesurco
-
-Fondesurco es una cooperativa de ahorros y de crédito de la ciudad de Arequipa, Perú. Con más de 26 oficinas en el sur del país, localizados en los departamentos: Arequipa, Moquegua, Puno, Ayacucho y Huancavelica, Fondesurco tiene una visión de cooperativa con la visión de consolidarse en las zonas rurales donde las posibilidades de acceso a crédito son escasas. Con una transformación reciente de organización no gubernamental (ONG) a Cooperativa, Fondesurco aumentó la oferta de servicios financieros incluyendo el ahorro. Como institución pionera en el país en el desarrollo de productos de crédito de microfinanzas verdes en el marco de su Programa de Soluciones de Energía Renovable (SER), su objetivo es ofrecer un mejor acceso a las energías limpias y aumentar la eficiencia energética a la población rural de bajos recursos en sus zonas de cobertura.
 
 
 
 ## HEDERA
-HEDERA es una Startup basada en Berlín que tiene por objetivo revolucionar la forma en que el impacto se mide, monitorea y reporta. HEDERA ofrece la plataforma para compartir y escalar actividades de inversión sostenible & monitorear de manera costo-eficiente, descentralizada y centrada en el cliente, el impacto con respecto a los alcances de los ODS. A través de sus herramientas móviles, HEDERA empodera a las instituciones a recoger información a bajo costo y visualizarla analizada, siguiendo los estándares internacionales de medición de impacto. Además, a través de su red, HEDERA permite la conexión de actores en el sector de inversión de impacto de una manera eficiente y económica.
+HEDERA is a Berlin-based startup that develops sustainable solutions for impact assesment, aiming to revolutionize the way in which impact is measured, monitored and reported. HEDERA offers the platform to share and scale sustainable investment activities & monitor impact and progress towards the SDGs at the household level. 
+Through its mobile tools, HEDERA empowers institutions to collect information at laffordable cost, offering then automatic analysis and web-based visualization tools. The analysis and reporting follow the latest international standards of impact measurement. In addition, through its network, HEDERA allows the efficient connection of stakeholders in the whole impact investing sector.
 
 

@@ -2,13 +2,13 @@
 interact_link: content/e-legality.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'LEGALIDAD ¿Se presta el servicio de electricidad formalmente o por conexiones informales?'
+title: 'LEGALITY - Is the access to energy formal (legal) or informal?'
 prev_page:
-  url: /e-affordability
-  title: 'ASEQUIBILIDAD ¿Pueden los hogares permitirse la compra de electricidad?'
+  url: /e-duration
+  title: 'DURATION - How many hours if electricity available?'
 next_page:
-  url: /e-reliability
-  title: 'CONFIABILIDAD ¿Es el servicio de electricidad confiable?'
+  url: /e-safety
+  title: 'SAFETY - Is the energy safe?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

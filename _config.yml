@@ -16,11 +16,11 @@
 
 #######################################################################################
 # Jekyll site settings
-title: Reporte de Acceso a Energía
+title: Energy Access Report
 author: HEDERA
 email: contact@hedera.online
 description: >-
-  Reporte de Acceso a Energía, Proyecto Piloto 2019
+  Energy Access Report, HEDERA demo
 
 baseurl: /               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 # Note: if the online version is created in github, it takes the name of the book as sub-domain
@@ -114,7 +114,7 @@ defaults:
   values:
     layout: default
     toc: true
-    toc_label: '  En esa página'
+    toc_label: 'On this page'
     toc_icon: list-ul
 
 favicon_path: images/logo/favicon.ico

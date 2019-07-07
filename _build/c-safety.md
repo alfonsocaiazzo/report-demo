@@ -2,13 +2,13 @@
 interact_link: content/c-safety.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'SEGURIDAD ¿El sistema de cocina es seguro o se expone el hogar a posibles accidentes?'
+title: 'SAFETY - Is the cooking solution (stove and fuel) safe?'
 prev_page:
   url: /c-availability
-  title: 'DISPONIBILIDAD ¿Está disponible el combustible durante el año?'
+  title: 'AVAILABILITY - Is the cooking fuel available throughout the year?'
 next_page:
-  url: /c-conclusions
-  title: 'RECOMENDACIONES'
+  url: /conclusions
+  title: 'CONCLUSIONS'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
