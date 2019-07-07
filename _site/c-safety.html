@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>SAFETY - Is the cooking solution (stove and fuel) safe?</title>
-  <meta name="description" content="Servicios de Energía">
+  <meta name="description" content="Safety: Is the cooking solution (stove &amp; fuel) safe?">
 
   <link rel="canonical" href="http://0.0.0.0:4000//c-safety.html">
   <link rel="alternate" type="application/rss+xml" title="Energy Access Report" href="http://0.0.0.0:4000//feed.xml">
@@ -16,7 +16,7 @@
   <meta property="og:url"         content="http://0.0.0.0:4000//c-safety.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="SAFETY - Is the cooking solution (stove and fuel) safe?" />
-<meta property="og:description" content="Servicios de Energía" />
+<meta property="og:description" content="Safety: Is the cooking solution (stove &amp; fuel) safe?" />
 <meta property="og:image"       content="" />
 
 
@@ -29,11 +29,11 @@
   "headline":
     "SAFETY - Is the cooking solution (stove and fuel) safe?",
   "datePublished":
-    "2019-07-07T13:44:33-05:00",
+    "2019-07-07T16:52:12-05:00",
   "dateModified":
-    "2019-07-07T13:44:33-05:00",
+    "2019-07-07T16:52:12-05:00",
   "description":
-    "Servicios de Energía",
+    "Safety: Is the cooking solution (stove &amp; fuel) safe?",
   "author": {
     "@type": "Person",
     "name": "HEDERA"
@@ -670,7 +670,7 @@ initFunction(initQuery);
           href="/e-capacity.html"
         >
           
-          Capacity - If the capacity enough to satisfy household needs?
+          CAPACITY - If the capacity enough to satisfy household needs?
         </a>
 
         
@@ -964,38 +964,65 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="servicios-de-energía">Servicios de Energía</h1>
+              <h1 id="safety-is-the-cooking-solution-stove--fuel-safe">Safety: Is the cooking solution (stove &amp; fuel) safe?</h1>
 
-<p>Según los aparatos que disponga y haga uso el hogar, se clasifican estos siguiendo la matriz de evaluación del MTF.</p>
+<p>There are only two possible categorizations of levels. Households that have had accidents and / or do not have sufficient ventilation in the kitchen are in level 3, otherwise in level 5.</p>
+
+<ul>
+  <li>Ventilation in kitchens is not adequate for more than 20% of households</li>
+  <li>One fifth of the sample reports having backpain due to kitchen design</li>
+  <li>One tenth of households cook in the area where they sleep</li>
+  <li>There were 9 cases of accidents</li>
+</ul>
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># load packages</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
 <span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="s">'../../src'</span><span class="p">)))</span>
 <span class="kn">import</span> <span class="nn">hedera_types</span> <span class="k">as</span> <span class="n">hedera</span>
 <span class="kn">import</span> <span class="nn">odk_interface</span> <span class="k">as</span> <span class="n">odk</span>
 <span class="kn">import</span> <span class="nn">mtf</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
-<span class="c"># institution data</span>
-<span class="n">sunrise</span> <span class="o">=</span> <span class="n">hedera</span><span class="o">.</span><span class="n">mfi</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">"font.family"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Tw Cen MT"</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">20</span><span class="p">})</span>
+
+<span class="c"># load institution data</span>
+<span class="n">fondesurco</span> <span class="o">=</span> <span class="n">hedera</span><span class="o">.</span><span class="n">mfi</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">odk_data_dir</span> <span class="o">=</span> <span class="s">'../../_datasets/DataODK/'</span>
 <span class="n">odk_survey_folder</span> <span class="o">=</span> <span class="p">[</span><span class="s">'PEPI_19_03_19/'</span><span class="p">,</span><span class="s">'PEPI_FONDESURCO_19_04_17/'</span><span class="p">]</span>
 <span class="n">odk_data_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_survey_folder</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">'PEPI_results.csv'</span><span class="p">,</span>
                  <span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_survey_folder</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> 
                  <span class="s">'PEPI_FONDESURCO_2_results.csv'</span><span class="p">]</span>
-<span class="n">sunrise</span><span class="o">.</span><span class="n">gpsFile</span> <span class="o">=</span> <span class="s">'../../_datasets/Demo/GPS.csv'</span>
-<span class="n">data_demo</span> <span class="o">=</span> <span class="n">sunrise</span><span class="o">.</span><span class="n">read_survey</span><span class="p">(</span><span class="n">odk_data_name</span><span class="p">)</span>
-<span class="n">HH</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">households</span><span class="p">(</span><span class="n">data_demo</span><span class="p">)</span>
-<span class="n">collections</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">overview</span><span class="p">(</span><span class="n">HH</span><span class="p">,[</span><span class="n">sunrise</span><span class="p">])</span>
+<span class="n">fondesurco</span><span class="o">.</span><span class="n">gpsFile</span> <span class="o">=</span> <span class="s">'../../_datasets/Fondesurco/HederaGPS/All.txt'</span>
+<span class="n">fondesurco</span><span class="o">.</span><span class="n">data_client_file</span> <span class="o">=</span> <span class="s">'../../_datasets/Fondesurco/ClientDatabases/data_with_GPS_3.csv'</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fondesurco</span><span class="o">.</span><span class="n">read_survey</span><span class="p">(</span><span class="n">odk_data_name</span><span class="p">)</span>
+<span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">households</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c"># get summaries of used sources, fuels, stoces</span>
+<span class="n">collection_overview</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">overview</span><span class="p">(</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span><span class="p">,[</span><span class="n">fondesurco</span><span class="p">])</span>
+
+<span class="n">sources_summary</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">collection_overview</span><span class="p">,</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">powerSources</span><span class="p">,</span>
+                              <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">powerSources</span><span class="p">,</span>
+                              <span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">powerSourcesColors</span><span class="p">)</span>
+<span class="n">stoves_summary</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">collection_overview</span><span class="p">,</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">stoves</span><span class="p">,</span>
+                             <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">stoves</span><span class="p">,</span>
+                             <span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">stovesColors</span><span class="p">)</span>
+<span class="n">fuels_summary</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">collection_overview</span><span class="p">,</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">fuels</span><span class="p">,</span>
+                              <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">fuels</span><span class="p">,</span>
+                              <span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">fuelsColors</span><span class="p">)</span>
+
 </code></pre></div>    </div>
   </div>
 
 </div>
 
 <div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sunrise</span><span class="o">.</span><span class="n">tier_plots</span><span class="p">(</span><span class="n">HH</span><span class="p">,</span><span class="s">'E_Services'</span><span class="p">)</span>
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">tier_plots</span><span class="p">(</span><span class="s">'C_Safety'</span><span class="p">)</span>
 </code></pre></div>    </div>
   </div>
 
@@ -1015,9 +1042,47 @@ initFunction(initQuery);
   </div>
 </div>
 
-<h3 id="hay-una-correlación-entre-el-nivel-de-suministro-de-electricidad-y-los-ingresos-mensuales">Hay una correlación entre el nivel de suministro de electricidad y los ingresos mensuales</h3>
+<h2 id="safety-vs-solution">Safety vs. Solution</h2>
+<p>Regardless of the kitchen and fuel, homes with firewood, dung or gas report low security.</p>
 
-<p>En el quintil más bajo de ingresos se observan aún hogares clasificados en niveles superiores (3). Por otro lado, en los quintiles más altos, 4 y 5 todavía se encuentran hogares en los niveles más bajos, 0. A diferencia de lo esperado, sobre el 50% de los hogares en el cuarto quintil, están en el nivel 1 de suministro de electricidad.</p>
+<p>The two cases of fuel accidents occurred in households that use firewood for cooking. One sixth of gas users can not ventilate or sleep in the same place where they cook.</p>
+
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hedera</span><span class="o">.</span><span class="n">plot_stacked_tier_per_category</span><span class="p">(</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span><span class="s">"C_Safety"</span><span class="p">,</span>
+                                          <span class="n">fuels_summary</span><span class="o">.</span><span class="n">used_keys</span><span class="p">,</span>
+                                          <span class="s">'primary_cooking_fuel'</span><span class="p">,</span>
+                                          <span class="n">fuels_summary</span><span class="o">.</span><span class="n">used_names</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/c-safety_4_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="safety-vs-income">Safety vs. Income</h2>
+<p>The level of income is independent of the occurrence of accidents due to fuel:
+Households that reported health and safety issues are found in all quintiles in a similar proportion.</p>
+
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">odk</span><span class="o">.</span><span class="n">plot_tiers_per_quintile</span><span class="p">(</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span><span class="s">'C_Safety'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/c-safety_6_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
 
               <nav class="c-page__nav">
   

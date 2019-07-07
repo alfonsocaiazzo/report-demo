@@ -14,12 +14,10 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 # Energy Services
 
-¿Qué tipos de servicios de energía tienen acceso los hogares según sus electrodomésticos?
-
-
+What types of electricity services are available to the household?
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 import os,sys
 here = os.path.abspath('')
@@ -46,11 +44,12 @@ fondesurco.HH = odk.households(data)
 
 </div>
 
-## Clasificación MTF
+## MTF Ranking (Electricity Services)
 
-Según los aparatos que disponga y haga uso el hogar, se clasifican estos siguiendo la matriz de evaluación del MTF.
+According to the devices available and used in the household, 
+these are classified following the MTF evaluation matrix.
 
-Las aplicaciones encontradas en el campo reflejan el limitado uso de servicios eléctricos usados en la región. La mayoría de los hogares se caracterizan por consumir poca electricidad. Un cuarto de la muestra, además de los aparatos de comunicación y entretenimiento, también cuenta con electrodomésticos como la plancha y licuadora de mayor consumo de energía. Solo 4 hogares reportaron tener duchas eléctricas para calentar el agua al bañarse.
+The applications found in the field reflect the limited use of electrical services used in the region. Most households are characterized by low electricity consumption. A quarter of the sample, in addition to communication and entertainment devices, also has appliances such as the iron and blender with the highest energy consumption. Only 4 households reported having electric showers to heat the water when bathing.
 
 
 <div markdown="1" class="cell code_cell">
@@ -82,8 +81,49 @@ fondesurco.tier_plots('E_Services',legend=True)
 
 ## Appliances
  
-Casi el 50% de los hogares cuentan sola- mente con celulares, iluminación, radio y televisor.
+Almost 50% of households only have cell phones, lighting, radio and television.
 
- 
-Después de la iluminación y los teléfonos celulares, más de la mitad de los hogares tienen radio y televisor a color. Electrodomésticos que facilitan labores del hogar como la lavadora o lavavajillas fueron de mínima ocurrencia. Menos del 20% usan refrigeradora, encontrada en todas las oficinas en similar proporción, quien después de la plancha y la licuadora, son los electrodomésticos encontrados más frecuentemente en el campo. Los dos casos de hogares usando velas, no contaban con ninguna aplicación alimentada por otra fuente de energía. La percepción de los hogares con respecto a los aparatos que más consumen indicaron que los televisores (55%), los refrigeradores (15%), y los radios (10%), son aquellos que, según su percepción, más afectan los recibos de luz.
+After lighting and cell phones, more than half of households have a color television and radio. Appliances that facilitate household chores such as the washing machine or dishwasher were of minimal occurrence. Less than 20% use refrigerators, found in all offices in a similar proportion, who after the iron and the blender, are the appliances most frequently found in the field. The two cases of households using candles, did not have any application powered by another source of energy. The perception of households with respect to the devices that consume the most indicated that televisions (55%), refrigerators (15%), and radios (10%), are those that, according to their perception, most affect the receipts of light.
 
+<div markdown="1" class="cell code_cell">
+<div class="input_area hidecode" markdown="1">
+```python
+[appliances_per_x,u_id] = odk.compute_appliances_per_x(data,fondesurco.HH,fondesurco.offices,'locality')
+odk.plot_appliances_per_x(len(fondesurco.HH),appliances_per_x,u_id,'locality',
+                          fondesurco.offices,
+                          figPath=None,c=fondesurco.office_color)
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+{:.output_png}
+![png](images/e-services_5_0.png)
+
+</div>
+</div>
+</div>
+
+## Services vs. Income
+
+The level of income and the consumption of electricity are correlated.
+
+With higher income, households have more appliances and more power, unlike households in the lowest income quintiles that reported fewer appliances.
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area hidecode" markdown="1">
+```python
+odk.plot_tiers_per_quintile(fondesurco.HH,'E_Services',figPath=None)
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+{:.output_png}
+![png](images/e-services_7_0.png)
+
+</div>
+</div>
+</div>

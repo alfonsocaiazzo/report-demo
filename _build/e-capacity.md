@@ -2,7 +2,7 @@
 interact_link: content/e-capacity.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Capacity - If the capacity enough to satisfy household needs?'
+title: 'CAPACITY - If the capacity enough to satisfy household needs?'
 prev_page:
   url: /e-quality
   title: 'QUALITY - Does voltage fluctuation affect appliances?'

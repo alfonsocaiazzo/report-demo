@@ -29,9 +29,9 @@
   "headline":
     "Energy Services &amp; Appliances",
   "datePublished":
-    "2019-07-07T13:44:33-05:00",
+    "2019-07-07T16:52:12-05:00",
   "dateModified":
-    "2019-07-07T13:44:33-05:00",
+    "2019-07-07T16:52:12-05:00",
   "description":
     "Energy Services",
   "author": {
@@ -670,7 +670,7 @@ initFunction(initQuery);
           href="/e-capacity.html"
         >
           
-          Capacity - If the capacity enough to satisfy household needs?
+          CAPACITY - If the capacity enough to satisfy household needs?
         </a>
 
         
@@ -966,10 +966,10 @@ initFunction(initQuery);
             <div class="c-textbook__content">
               <h1 id="energy-services">Energy Services</h1>
 
-<p>¿Qué tipos de servicios de energía tienen acceso los hogares según sus electrodomésticos?</p>
+<p>What types of electricity services are available to the household?</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
 <span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="s">'../../src'</span><span class="p">)))</span>
@@ -995,11 +995,12 @@ initFunction(initQuery);
 
 </div>
 
-<h2 id="clasificación-mtf">Clasificación MTF</h2>
+<h2 id="mtf-ranking-electricity-services">MTF Ranking (Electricity Services)</h2>
 
-<p>Según los aparatos que disponga y haga uso el hogar, se clasifican estos siguiendo la matriz de evaluación del MTF.</p>
+<p>According to the devices available and used in the household, 
+these are classified following the MTF evaluation matrix.</p>
 
-<p>Las aplicaciones encontradas en el campo reflejan el limitado uso de servicios eléctricos usados en la región. La mayoría de los hogares se caracterizan por consumir poca electricidad. Un cuarto de la muestra, además de los aparatos de comunicación y entretenimiento, también cuenta con electrodomésticos como la plancha y licuadora de mayor consumo de energía. Solo 4 hogares reportaron tener duchas eléctricas para calentar el agua al bañarse.</p>
+<p>The applications found in the field reflect the limited use of electrical services used in the region. Most households are characterized by low electricity consumption. A quarter of the sample, in addition to communication and entertainment devices, also has appliances such as the iron and blender with the highest energy consumption. Only 4 households reported having electric showers to heat the water when bathing.</p>
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
@@ -1027,10 +1028,48 @@ initFunction(initQuery);
 
 <h2 id="appliances">Appliances</h2>
 
-<p>Casi el 50% de los hogares cuentan sola- mente con celulares, iluminación, radio y televisor.</p>
+<p>Almost 50% of households only have cell phones, lighting, radio and television.</p>
 
-<p>Después de la iluminación y los teléfonos celulares, más de la mitad de los hogares tienen radio y televisor a color. Electrodomésticos que facilitan labores del hogar como la lavadora o lavavajillas fueron de mínima ocurrencia. Menos del 20% usan refrigeradora, encontrada en todas las oficinas en similar proporción, quien después de la plancha y la licuadora, son los electrodomésticos encontrados más frecuentemente en el campo. Los dos casos de hogares usando velas, no contaban con ninguna aplicación alimentada por otra fuente de energía. La percepción de los hogares con respecto a los aparatos que más consumen indicaron que los televisores (55%), los refrigeradores (15%), y los radios (10%), son aquellos que, según su percepción, más afectan los recibos de luz.</p>
+<p>After lighting and cell phones, more than half of households have a color television and radio. Appliances that facilitate household chores such as the washing machine or dishwasher were of minimal occurrence. Less than 20% use refrigerators, found in all offices in a similar proportion, who after the iron and the blender, are the appliances most frequently found in the field. The two cases of households using candles, did not have any application powered by another source of energy. The perception of households with respect to the devices that consume the most indicated that televisions (55%), refrigerators (15%), and radios (10%), are those that, according to their perception, most affect the receipts of light.</p>
 
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">appliances_per_x</span><span class="p">,</span><span class="n">u_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">compute_appliances_per_x</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">offices</span><span class="p">,</span><span class="s">'locality'</span><span class="p">)</span>
+<span class="n">odk</span><span class="o">.</span><span class="n">plot_appliances_per_x</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span><span class="p">),</span><span class="n">appliances_per_x</span><span class="p">,</span><span class="n">u_id</span><span class="p">,</span><span class="s">'locality'</span><span class="p">,</span>
+                          <span class="n">fondesurco</span><span class="o">.</span><span class="n">offices</span><span class="p">,</span>
+                          <span class="n">figPath</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">office_color</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/e-services_5_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="services-vs-income">Services vs. Income</h2>
+
+<p>The level of income and the consumption of electricity are correlated.</p>
+
+<p>With higher income, households have more appliances and more power, unlike households in the lowest income quintiles that reported fewer appliances.</p>
+
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">odk</span><span class="o">.</span><span class="n">plot_tiers_per_quintile</span><span class="p">(</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span><span class="s">'E_Services'</span><span class="p">,</span><span class="n">figPath</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/e-services_7_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
 
               <nav class="c-page__nav">
   

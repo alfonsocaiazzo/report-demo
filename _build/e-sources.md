@@ -16,7 +16,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 import os,sys
 here = os.path.abspath('')
@@ -82,7 +82,7 @@ Households spend in average less than 30 Soles per month in electricity.
 
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 fondesurco.plot_mean_per_office(fondesurco.HH,'energy_expenses')
 ```
@@ -102,7 +102,7 @@ fondesurco.plot_mean_per_office(fondesurco.HH,'energy_expenses')
 Households using candles have higher energy costs.
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 colors = []
 for k in sources_summary.used_keys:

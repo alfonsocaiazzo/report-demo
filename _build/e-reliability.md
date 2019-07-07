@@ -5,7 +5,7 @@ has_widgets: false
 title: 'RELIABILITY - Is the energy provided reliable?'
 prev_page:
   url: /e-capacity
-  title: 'Capacity - If the capacity enough to satisfy household needs?'
+  title: 'CAPACITY - If the capacity enough to satisfy household needs?'
 next_page:
   url: /e-duration
   title: 'DURATION - How many hours if electricity available?'

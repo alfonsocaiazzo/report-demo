@@ -8,7 +8,7 @@ prev_page:
   title: 'AFFORDABILITY - Is the energy affordable?'
 next_page:
   url: /e-capacity
-  title: 'Capacity - If the capacity enough to satisfy household needs?'
+  title: 'CAPACITY - If the capacity enough to satisfy household needs?'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

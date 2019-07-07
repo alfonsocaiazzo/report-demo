@@ -29,9 +29,9 @@
   "headline":
     "Executive Summary",
   "datePublished":
-    "2019-07-07T13:44:33-05:00",
+    "2019-07-07T16:52:12-05:00",
   "dateModified":
-    "2019-07-07T13:44:33-05:00",
+    "2019-07-07T16:52:12-05:00",
   "description":
     "Executive Summary",
   "author": {
@@ -670,7 +670,7 @@ initFunction(initQuery);
           href="/e-capacity.html"
         >
           
-          Capacity - If the capacity enough to satisfy household needs?
+          CAPACITY - If the capacity enough to satisfy household needs?
         </a>
 
         
@@ -1005,7 +1005,7 @@ detailed tier ranking of the surveyed clients.
 <a href="http://hedera.online">HEDERA</a> allows therefore institutions to make demand-driven decisions based on real information at the most detailed level.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># load HIT libraries and institution data</span>
 
 <span class="c"># load packages</span>
@@ -1084,7 +1084,7 @@ The MTF energy access index of the sample was 46.6/100, while the MTF index for 
 was  71.0/100.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">plot_collection_overview</span><span class="p">(</span><span class="n">collection_overview</span><span class="p">)</span>
 </code></pre></div>    </div>
   </div>
@@ -1104,7 +1104,7 @@ attributes of energy access.
 The ranking of the sample has been evaluated for access to electricity services, electricity supply and access to energy for modern cooking solutions.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">([</span><span class="s">'E_Services'</span><span class="p">,</span><span class="s">'E_Index'</span><span class="p">,</span><span class="s">'C_Index'</span><span class="p">],</span>
                      <span class="p">[</span><span class="s">'Access to electricity services'</span><span class="p">,</span>
                       <span class="s">'Access to electricity'</span><span class="p">,</span> <span class="s">'Access to modern cooking solutions'</span><span class="p">],</span>
@@ -1128,7 +1128,7 @@ its duration and the perceived safety. However, the affordability, reliability a
 21 households  (15.3%) have refrigerators and only 8 (5.8%) use electric water heaters.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">(</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">attributes_electricity</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span>
                      <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">e_attributes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span>
                      <span class="n">figPath</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
@@ -1153,7 +1153,7 @@ the results show that from the baseline, the most important aspect to improve ar
 and reliability (33% in tier 3) of electricity.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">([</span><span class="s">'PEPI_E_Affordability'</span><span class="p">,</span><span class="s">'PEPI_E_Reliability'</span><span class="p">,</span><span class="s">'E_Safety'</span><span class="p">],</span>
                      <span class="p">[</span><span class="s">'(PEPI electricity) Affordability'</span><span class="p">,</span><span class="s">'(PEPI electricity) Reliability'</span><span class="p">,</span><span class="s">'(PEPI electricity) Safety'</span><span class="p">],</span>
                      <span class="n">figPath</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
@@ -1179,7 +1179,7 @@ more than a third of the surveyed households requires improvement.</p>
 Moreover, 11 households have an additional wood-fired oven.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">(</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">attributes_cooking</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span>
                      <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">c_attributes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span>
                      <span class="n">figPath</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
@@ -1200,7 +1200,7 @@ Moreover, 11 households have an additional wood-fired oven.</p>
 <p>The PEPI baseline of cooking systems shows that fuel availability is the aspect that requires the most attention to improve access to modern cooking solutions.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">([</span><span class="s">'PEPI_C_Affordability'</span><span class="p">,</span><span class="s">'PEPI_C_Availability'</span><span class="p">,</span><span class="s">'C_Safety'</span><span class="p">],</span>
                      <span class="p">[</span><span class="s">'(PEPI cooking) Affordability'</span><span class="p">,</span><span class="s">'(PEPI cooking) Availability'</span><span class="p">,</span><span class="s">'(PEPI cooking) Safety'</span><span class="p">],</span>
                      <span class="n">figPath</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>

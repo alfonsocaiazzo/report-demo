@@ -29,9 +29,9 @@
   "headline":
     "Electricity Sources",
   "datePublished":
-    "2019-07-07T13:44:33-05:00",
+    "2019-07-07T16:52:12-05:00",
   "dateModified":
-    "2019-07-07T13:44:33-05:00",
+    "2019-07-07T16:52:12-05:00",
   "description":
     "Electricity sources",
   "author": {
@@ -670,7 +670,7 @@ initFunction(initQuery);
           href="/e-capacity.html"
         >
           
-          Capacity - If the capacity enough to satisfy household needs?
+          CAPACITY - If the capacity enough to satisfy household needs?
         </a>
 
         
@@ -967,7 +967,7 @@ initFunction(initQuery);
               <h1 id="electricity-sources">Electricity sources</h1>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
 <span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="s">'../../src'</span><span class="p">)))</span>
@@ -1028,7 +1028,7 @@ initFunction(initQuery);
 <p>Households spend in average less than 30 Soles per month in electricity.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fondesurco</span><span class="o">.</span><span class="n">plot_mean_per_office</span><span class="p">(</span><span class="n">fondesurco</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span><span class="s">'energy_expenses'</span><span class="p">)</span>
 </code></pre></div>    </div>
   </div>
@@ -1046,7 +1046,7 @@ initFunction(initQuery);
 <p>Households using candles have higher energy costs.</p>
 
 <div class="cell code_cell">
-  <div class="input_area">
+  <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colors</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sources_summary</span><span class="o">.</span><span class="n">used_keys</span><span class="p">:</span>
     <span class="n">ic</span> <span class="o">=</span> <span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">powerSources</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>

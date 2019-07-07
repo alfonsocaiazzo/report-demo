@@ -54,7 +54,7 @@ detailed tier ranking of the surveyed clients.
 [HEDERA](http://hedera.online) allows therefore institutions to make demand-driven decisions based on real information at the most detailed level.
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 # load HIT libraries and institution data
 
@@ -138,7 +138,7 @@ The MTF energy access index of the sample was 46.6/100, while the MTF index for 
 was  71.0/100.
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 fondesurco.plot_collection_overview(collection_overview)
 ```
@@ -160,7 +160,7 @@ attributes of energy access.
 The ranking of the sample has been evaluated for access to electricity services, electricity supply and access to energy for modern cooking solutions.
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 fondesurco.tier_barh(['E_Services','E_Index','C_Index'],
                      ['Access to electricity services',
@@ -186,7 +186,7 @@ its duration and the perceived safety. However, the affordability, reliability a
 21 households  (15.3%) have refrigerators and only 8 (5.8%) use electric water heaters.
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 fondesurco.tier_barh(hedera.keys().attributes_electricity[0:8],
                      hedera.names('en').e_attributes[0:8],
@@ -213,7 +213,7 @@ the results show that from the baseline, the most important aspect to improve ar
 and reliability (33% in tier 3) of electricity.
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 fondesurco.tier_barh(['PEPI_E_Affordability','PEPI_E_Reliability','E_Safety'],
                      ['(PEPI electricity) Affordability','(PEPI electricity) Reliability','(PEPI electricity) Safety'],
@@ -241,7 +241,7 @@ Consecutively, the availability and quality of firewood for cooking affect house
 Moreover, 11 households have an additional wood-fired oven.
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 fondesurco.tier_barh(hedera.keys().attributes_cooking[0:4],
                      hedera.names('en').c_attributes[0:4],
@@ -264,7 +264,7 @@ fondesurco.tier_barh(hedera.keys().attributes_cooking[0:4],
 The PEPI baseline of cooking systems shows that fuel availability is the aspect that requires the most attention to improve access to modern cooking solutions.
 
 <div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
+<div class="input_area hidecode" markdown="1">
 ```python
 fondesurco.tier_barh(['PEPI_C_Affordability','PEPI_C_Availability','C_Safety'],
                      ['(PEPI cooking) Affordability','(PEPI cooking) Availability','(PEPI cooking) Safety'],
