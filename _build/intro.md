@@ -12,11 +12,13 @@ next_page:
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-# Introduction
+# Energy Access Report
 
-## Energy Access Report
+The objective of this project is to analyze the access to energy (electricity and cooking solution) in a rural area of Kenya.
+The research has been conducted by Hillary Kipcoech Korir, a master student at the 
+[Panafrican University for Water and Energy Sciences](https://www.pauwes.dz/) (PAUWES) of Tlemcen (Algeria).
 
-The objective of this project is to analyze the access to energy of a sample of clients of a microfinance institution with the HEDERA Impact Toolkit Software. 
+Data collection, processing and visualization have been supported by the [HEDERA Impact Toolkit](http://hedera.online/sdg7/index.html) Software. 
 Relevant information concerning the use, associated costs and several attributes describing access to electricity and cooking solutions has been collected the customers of the financial institution in rural and remote areas
 using the App HEDERA collect.
 The HEDERA Impact Toolkit allows to efficiently evaluating a baseline for monitoring progress towards Sustainable Development Goal 7 following the [Multi-tier Framework](https://www.esmap.org/node/55526) (MTF), recently established by The World Bank, and the

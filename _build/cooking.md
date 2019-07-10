@@ -28,8 +28,8 @@ from pivottablejs import pivot_ui
 import matplotlib.pyplot as plt
 
 # change plot layout
-plt.rcParams["font.family"] = "Tw Cen MT"
-plt.rcParams.update({'font.size': 20})
+plt.rcParams["font.family"] = "Arial"
+plt.rcParams.update({'font.size': 16})
 
 odk_data_dir = '../../_datasets/DataODK/'
 odk_folder_dir = 'HEDERA_SDG7/'
@@ -74,7 +74,27 @@ mfi.cooking_fuels_summary(legend=True)
 </div>
 </div>
 
+### Attributed describing access to cooking solutions
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area hidecode" markdown="1">
+```python
+mfi.tier_barh(hedera.keys().attributes_cooking[0:4],hedera.names('en').c_attributes[0:4],legend=True)
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+{:.output_png}
+![png](images/cooking_5_0.png)
+
+</div>
+</div>
+</div>
+
 ### MTF Index (Cooking solutions)
+The MTF Index, for each household, is given by the minimum ranking among all attributes
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
@@ -87,7 +107,7 @@ mfi.tier_pie('C_Index')
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/cooking_5_0.png)
+![png](images/cooking_7_0.png)
 
 </div>
 </div>
@@ -108,7 +128,7 @@ mfi.stacked_tier_per_category('C_Index',hedera.keys().fuels,
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/cooking_7_0.png)
+![png](images/cooking_9_0.png)
 
 </div>
 </div>

@@ -29,9 +29,9 @@
   "headline":
     "Search the site",
   "datePublished":
-    "2019-07-09T19:00:17-05:00",
+    "2019-07-10T03:11:44-05:00",
   "dateModified":
-    "2019-07-09T19:00:17-05:00",
+    "2019-07-10T03:11:44-05:00",
   "description":
     "Energy Access Report, HEDERA demo",
   "author": {
@@ -619,7 +619,7 @@ initFunction(initQuery);
         "title": "Access to Modern Cooking Solutions",
         
         "excerpt":
-            "Cooking solutions import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf from pivottablejs import pivot_ui import matplotlib.pyplot as plt # change plot layout plt.rcParams[\"font.family\"] = \"Tw Cen MT\" plt.rcParams.update({'font.size': 20}) odk_data_dir = '../../_datasets/DataODK/' odk_folder_dir = 'HEDERA_SDG7/' #odk_folder_dir = 'HEDERA_SDG7_19_07_05/' ## @brief name of the file (this should not be changed, it is set from ODK) odk_data_name = 'HEDERA_SDG7_results.csv' # initialize the institution mfi = hedera.mfi(4) # read database data = mfi.read_survey(odk_data_dir + odk_folder_dir+odk_data_name, delimiter='-') mfi.HH = odk.households(data) Cooking fuels Primary fuels mfi.cooking_fuels_summary(legend=True) MTF Index (Cooking solutions) mfi.tier_pie('C_Index') MTF Index vs. Cooking...",
+            "Cooking solutions import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf from pivottablejs import pivot_ui import matplotlib.pyplot as plt # change plot layout plt.rcParams[\"font.family\"] = \"Arial\" plt.rcParams.update({'font.size': 16}) odk_data_dir = '../../_datasets/DataODK/' odk_folder_dir = 'HEDERA_SDG7/' #odk_folder_dir = 'HEDERA_SDG7_19_07_05/' ## @brief name of the file (this should not be changed, it is set from ODK) odk_data_name = 'HEDERA_SDG7_results.csv' # initialize the institution mfi = hedera.mfi(4) # read database data = mfi.read_survey(odk_data_dir + odk_folder_dir+odk_data_name, delimiter='-') mfi.HH = odk.households(data) Cooking fuels Primary fuels mfi.cooking_fuels_summary(legend=True) Attributed describing access to cooking solutions mfi.tier_barh(hedera.keys().attributes_cooking[0:4],hedera.names('en').c_attributes[0:4],legend=True) MTF Index (Cooking solutions)...",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/cooking.html",
@@ -627,7 +627,7 @@ initFunction(initQuery);
         "title": "Access to electricity",
         
         "excerpt":
-            "Electricity sources import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf from pivottablejs import pivot_ui import matplotlib.pyplot as plt # change plot layout plt.rcParams[\"font.family\"] = \"Tw Cen MT\" plt.rcParams.update({'font.size': 20}) odk_data_dir = '../../_datasets/DataODK/' odk_folder_dir = 'HEDERA_SDG7/' #odk_folder_dir = 'HEDERA_SDG7_19_07_05/' ## @brief name of the file (this should not be changed, it is set from ODK) odk_data_name = 'HEDERA_SDG7_results.csv' # initialize the institution mfi = hedera.mfi(4) # read database data = mfi.read_survey(odk_data_dir + odk_folder_dir+odk_data_name, delimiter='-') mfi.HH = odk.households(data) MTF Index (Access to electricity) mfi.tier_pie('C_Index') Electricity sources Primary sources mfi.electricity_sources_summary(legend=True) ### Primary and...",
+            "Electricity sources import os,sys here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk import mtf from pivottablejs import pivot_ui import matplotlib.pyplot as plt # change plot layout plt.rcParams[\"font.family\"] = \"Arial\" plt.rcParams.update({'font.size': 20}) odk_data_dir = '../../_datasets/DataODK/' odk_folder_dir = 'HEDERA_SDG7/' #odk_folder_dir = 'HEDERA_SDG7_19_07_05/' ## @brief name of the file (this should not be changed, it is set from ODK) odk_data_name = 'HEDERA_SDG7_results.csv' # initialize the institution mfi = hedera.mfi(4) # read database data = mfi.read_survey(odk_data_dir + odk_folder_dir+odk_data_name, delimiter='-') mfi.HH = odk.households(data) Attributes describing the access to electricity mfi.tier_barh(hedera.keys().attributes_electricity[0:8], hedera.names('en').e_attributes[0:8],legend=True) MTF Index (Access to electricity) The MTF Index...",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/elect.html",
@@ -635,7 +635,7 @@ initFunction(initQuery);
         "title": "Map & Overview",
         
         "excerpt":
-            "Interactive Page (GPS &amp; Household database) Map View In this section it is possible to explore in detail where the survey has been implemented, and perform basic analysis on the collected data. import os,sys, folium, pandas here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk from pivottablejs import pivot_ui import matplotlib.pyplot as plt plt.rcParams[\"font.family\"] = \"Tw Cen MT\" plt.rcParams.update({'font.size': 20}) odk_data_dir = '../../_datasets/DataODK/' odk_folder_dir = 'HEDERA_SDG7/' #odk_folder_dir = 'HEDERA_SDG7_19_07_05/' ## @brief name of the file (this should not be changed, it is set from ODK) odk_data_name = 'HEDERA_SDG7_results.csv' # initialize the institution mfi = hedera.mfi(4)...",
+            "Household data (interactive analysis) In this section it is possible to explore in detail where the survey has been implemented, and perform basic analysis on the collected data. Map View The Map allows to visualize the location of the collected GPS data. Missing data points are displayed with coordinated (0,0) import os,sys, folium, pandas here = os.path.abspath('') sys.path.insert(0, os.path.normpath(os.path.join(here, '../../src'))) import hedera_types as hedera import odk_interface as odk from pivottablejs import pivot_ui import matplotlib.pyplot as plt plt.rcParams[\"font.family\"] = \"Arial\" plt.rcParams.update({'font.size': 20}) odk_data_dir = '../../_datasets/DataODK/' odk_folder_dir = 'HEDERA_SDG7/' #odk_folder_dir = 'HEDERA_SDG7_19_07_05/' ## @brief name of the file (this should not be...",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/gps.html",
@@ -643,7 +643,7 @@ initFunction(initQuery);
         "title": "Introduction",
         
         "excerpt":
-            "Introduction Energy Access Report The objective of this project is to analyze the access to energy of a sample of clients of a microfinance institution with the HEDERA Impact Toolkit Software. Relevant information concerning the use, associated costs and several attributes describing access to electricity and cooking solutions has been collected the customers of the financial institution in rural and remote areas using the App HEDERA collect. The HEDERA Impact Toolkit allows to efficiently evaluating a baseline for monitoring progress towards Sustainable Development Goal 7 following the Multi-tier Framework (MTF), recently established by The World Bank, and the Progress out...",
+            "Energy Access Report The objective of this project is to analyze the access to energy (electricity and cooking solution) in a rural area of Kenya. The research has been conducted by Hillary Kipcoech Korir, a master student at the Panafrican University for Water and Energy Sciences (PAUWES) of Tlemcen (Algeria). Data collection, processing and visualization have been supported by the HEDERA Impact Toolkit Software. Relevant information concerning the use, associated costs and several attributes describing access to electricity and cooking solutions has been collected the customers of the financial institution in rural and remote areas using the App HEDERA collect....",
         "categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/intro.html",

@@ -29,9 +29,9 @@
   "headline":
     "Access to electricity",
   "datePublished":
-    "2019-07-09T19:00:17-05:00",
+    "2019-07-10T03:11:44-05:00",
   "dateModified":
-    "2019-07-09T19:00:17-05:00",
+    "2019-07-10T03:11:44-05:00",
   "description":
     "Electricity sources",
   "author": {
@@ -638,7 +638,7 @@ initFunction(initQuery);
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
 <span class="c"># change plot layout</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">"font.family"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Tw Cen MT"</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">"font.family"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Arial"</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">20</span><span class="p">})</span>
 
 <span class="n">odk_data_dir</span> <span class="o">=</span> <span class="s">'../../_datasets/DataODK/'</span>
@@ -662,12 +662,13 @@ initFunction(initQuery);
 
 </div>
 
-<h3 id="mtf-index-access-to-electricity">MTF Index (Access to electricity)</h3>
+<h3 id="attributes-describing-the-access-to-electricity">Attributes describing the access to electricity</h3>
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="n">mfi</span><span class="o">.</span><span class="n">tier_pie</span><span class="p">(</span><span class="s">'C_Index'</span><span class="p">)</span>
+<span class="n">mfi</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">(</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">attributes_electricity</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span>
+              <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">e_attributes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
@@ -676,6 +677,27 @@ initFunction(initQuery);
     <div class="output_subarea">
 
       <p class="output_png"><img src="images/elect_3_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
+
+<h3 id="mtf-index-access-to-electricity">MTF Index (Access to electricity)</h3>
+
+<p>The MTF Index is given, for each household, by the minimum ranking among all considered attributes.</p>
+
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">mfi</span><span class="o">.</span><span class="n">tier_pie</span><span class="p">(</span><span class="s">'E_Index'</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/elect_5_0.png" alt="png" /></p>
 
     </div>
   </div>
@@ -693,7 +715,7 @@ initFunction(initQuery);
   <div class="output_wrapper">
     <div class="output_subarea">
 
-      <p class="output_png"><img src="images/elect_5_0.png" alt="png" /></p>
+      <p class="output_png"><img src="images/elect_7_0.png" alt="png" /></p>
 
     </div>
   </div>
@@ -717,7 +739,7 @@ initFunction(initQuery);
   <div class="output_wrapper">
     <div class="output_subarea">
 
-      <p class="output_png"><img src="images/elect_7_0.png" alt="png" /></p>
+      <p class="output_png"><img src="images/elect_9_0.png" alt="png" /></p>
 
     </div>
   </div>
@@ -736,7 +758,7 @@ initFunction(initQuery);
   <div class="output_wrapper">
     <div class="output_subarea">
 
-      <p class="output_png"><img src="images/elect_9_0.png" alt="png" /></p>
+      <p class="output_png"><img src="images/elect_11_0.png" alt="png" /></p>
 
     </div>
   </div>

@@ -27,7 +27,7 @@ from pivottablejs import pivot_ui
 import matplotlib.pyplot as plt
 
 # change plot layout
-plt.rcParams["font.family"] = "Tw Cen MT"
+plt.rcParams["font.family"] = "Arial"
 plt.rcParams.update({'font.size': 20})
 
 odk_data_dir = '../../_datasets/DataODK/'
@@ -51,15 +51,14 @@ mfi.HH = odk.households(data)
 
 </div>
 
-### MTF Index (Access to electricity)
-
-
+### Attributes describing the access to electricity
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
 
-mfi.tier_pie('C_Index')
+mfi.tier_barh(hedera.keys().attributes_electricity[0:8],
+              hedera.names('en').e_attributes[0:8],legend=True)
 
 ```
 </div>
@@ -69,6 +68,29 @@ mfi.tier_pie('C_Index')
 
 {:.output_png}
 ![png](images/elect_3_0.png)
+
+</div>
+</div>
+</div>
+
+### MTF Index (Access to electricity)
+
+The MTF Index is given, for each household, by the minimum ranking among all considered attributes.
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area hidecode" markdown="1">
+```python
+
+mfi.tier_pie('E_Index')
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+{:.output_png}
+![png](images/elect_5_0.png)
 
 </div>
 </div>
@@ -88,7 +110,7 @@ mfi.electricity_sources_summary(legend=True)
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/elect_5_0.png)
+![png](images/elect_7_0.png)
 
 </div>
 </div>
@@ -115,7 +137,7 @@ odk.plot_electricity_sources(collection_overview,'en')
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/elect_7_0.png)
+![png](images/elect_9_0.png)
 
 </div>
 </div>
@@ -136,7 +158,7 @@ mfi.stacked_tier_per_category('E_Index',hedera.keys().powerSources,
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/elect_9_0.png)
+![png](images/elect_11_0.png)
 
 </div>
 </div>
