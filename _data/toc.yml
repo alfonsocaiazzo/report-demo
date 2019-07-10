@@ -14,19 +14,9 @@
   - title: The Multi-tier Framework for Measuring Energy Access
     url: /mtf
     not_numbered: true
-  - title: Methodology
-    url: /methodology
-    not_numbered: true
-  - title: The App HEDERA collect
-    url: /collect
-    not_numbered: true
 
-- title: Executive Summary
-  url: /summary
-  not_numbered: true
-  expand_sections: true
 
-- title: Interactive - Map View 
+- title: Map & Overview 
   url: /gps
   not_numbered: true
   expand_sections: true
@@ -34,91 +24,19 @@
 # Divider for meta-pages and content page
 - divider: true
 
-- header: Access to Electricity
+- header: Results
 
-- title: Electricity Sources
-  url: /e-sources
-  not_numbered: true
-  expand_sections: true
-
-- title: Energy Services & Appliances
-  url: /e-services
-  not_numbered: true
-  expand_sections: true
-
-- title: AFFORDABILITY - Is the energy affordable?
-  url: /e-affordability
-  not_numbered: true
-  expand_sections: true
-
-- title: QUALITY - Does voltage fluctuation affect appliances?
-  url: /e-quality
-  not_numbered: true
-  expand_sections: true
-
-- title: CAPACITY - If the capacity enough to satisfy household needs?
-  url: /e-capacity
-  not_numbered: true
-  expand_sections: true
-
-- title: RELIABILITY - Is the energy provided reliable?
-  url: /e-reliability
-  not_numbered: true
-  expand_sections: true
-
-- title: DURATION - How many hours if electricity available? 
-  url: /e-duration
-  not_numbered: true
-  expand_sections: true
-
-- title: LEGALITY - Is the access to energy formal (legal) or informal?
-  url: /e-legality
-  not_numbered: true
-  expand_sections: true
-
-- title: SAFETY - Is the energy safe?
-  url: /e-safety
+- title: Access to electricity
+  url: /elect
   not_numbered: true
   expand_sections: true
 
 
-# Divider for meta-pages and content page
-- divider: true
-
-- header: Access to Modern Cooking Solutions
-
-- title: Cooking Solutions
-  url: /c-solutions
+- title: Access to Modern Cooking Solutions
+  url: /cooking
   not_numbered: true
   expand_sections: true
 
-- title: CONVENCIENCE -  How much time is needed to fetch fuel and prepare the stove?
-  url: /c-convenience
-  not_numbered: true
-  expand_sections: true
-
-- title: AFFORDABILITY - Is the fuel affordable?
-  url: /c-affordability
-  not_numbered: true
-  expand_sections: true
-
-- title: AVAILABILITY - Is the cooking fuel available throughout the year?
-  url: /c-availability
-  not_numbered: true
-  expand_sections: true
-
-- title: SAFETY - Is the cooking solution (stove and fuel) safe?
-  url: /c-safety
-  not_numbered: true
-  expand_sections: true
-
-# Divider for meta-pages and content page
-- divider: true
-
-- title: CONCLUSIONS
-  url: /conclusions
-  not_numbered: true
-  expand_sections: true
 
 
 # Divider for meta-pages and content page

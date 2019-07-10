@@ -7,8 +7,8 @@ prev_page:
   url: /intro
   title: 'Introduction'
 next_page:
-  url: /methodology
-  title: 'Methodology'
+  url: /gps
+  title: 'Map & Overview'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 

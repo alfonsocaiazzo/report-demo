@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>The Multi-tier Framework for Measuring Energy Access</title>
-  <meta name="description" content="Measuring Energy Access: the Multi-Tier Framrwork">
+  <title>Access to electricity</title>
+  <meta name="description" content="Electricity sources">
 
-  <link rel="canonical" href="http://0.0.0.0:4000//mtf.html">
+  <link rel="canonical" href="http://0.0.0.0:4000//elect.html">
   <link rel="alternate" type="application/rss+xml" title="Energy Access Report" href="http://0.0.0.0:4000//feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000//mtf.html" />
+  <meta property="og:url"         content="http://0.0.0.0:4000//elect.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="The Multi-tier Framework for Measuring Energy Access" />
-<meta property="og:description" content="Measuring Energy Access: the Multi-Tier Framrwork" />
+<meta property="og:title"       content="Access to electricity" />
+<meta property="og:description" content="Electricity sources" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000//mtf.html",
+    "http://0.0.0.0:4000//elect.html",
   "headline":
-    "The Multi-tier Framework for Measuring Energy Access",
+    "Access to electricity",
   "datePublished":
     "2019-07-09T19:00:17-05:00",
   "dateModified":
     "2019-07-09T19:00:17-05:00",
   "description":
-    "Measuring Energy Access: the Multi-Tier Framrwork",
+    "Electricity sources",
   "author": {
     "@type": "Person",
     "name": "HEDERA"
@@ -470,7 +470,7 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/mtf.html"
                 >
                   
@@ -527,7 +527,7 @@ initFunction(initQuery);
       
       
       <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+        <a class="c-sidebar__entry c-sidebar__entry--active"
           href="/elect.html"
         >
           
@@ -624,83 +624,136 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="measuring-energy-access-the-multi-tier-framrwork">Measuring Energy Access: the Multi-Tier Framrwork</h1>
+              <h1 id="electricity-sources">Electricity sources</h1>
 
-<h2 id="the-importance-of-measuring-energy-access">The importance of measuring energy access</h2>
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
+<span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="s">'../../src'</span><span class="p">)))</span>
+<span class="kn">import</span> <span class="nn">hedera_types</span> <span class="k">as</span> <span class="n">hedera</span>
+<span class="kn">import</span> <span class="nn">odk_interface</span> <span class="k">as</span> <span class="n">odk</span>
+<span class="kn">import</span> <span class="nn">mtf</span>
+<span class="kn">from</span> <span class="nn">pivottablejs</span> <span class="kn">import</span> <span class="n">pivot_ui</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
-<p>The concept and measurement of access to energy are of utmost importance to governments and development agencies in order to adapt the appropriate policies and programs to achieve global objectives. The Sustainable Energy for All initiative (SE4All) launched by the Secretary General of the United Nations in 2011 aims to achieve universal access to modern energy services by 2030. The <a href="https://sustainabledevelopment.un.org/sdg7">Sustainable Development Goal (SDG) number 7</a>, adopted in 2015 by all nations, aims to: ensure access to affordable, safe, sustainable and modern energy for all by 2030. Worldwide, it is estimated that more than two billion people lack access to modern energy.</p>
+<span class="c"># change plot layout</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">"font.family"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Tw Cen MT"</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">20</span><span class="p">})</span>
 
-<p>To monitor progress towards the goals of access to energy for all, the Energy Sector Management Assistance Program (ESMAP) of the World Bank and the International Energy Agency have led a consortium of 23 agencies international guidelines to establish the Global Monitoring Framework of the SE4All (Global Track Framework - GTF) that describes how to measure the baseline and progress towards the goals of the SE4All by collecting energy data regularly.</p>
+<span class="n">odk_data_dir</span> <span class="o">=</span> <span class="s">'../../_datasets/DataODK/'</span>
+<span class="n">odk_folder_dir</span> <span class="o">=</span> <span class="s">'HEDERA_SDG7/'</span>
+<span class="c">#odk_folder_dir = 'HEDERA_SDG7_19_07_05/'</span>
+<span class="c">## @brief name of the file (this should not be changed, it is set from ODK)</span>
+<span class="n">odk_data_name</span> <span class="o">=</span> <span class="s">'HEDERA_SDG7_results.csv'</span>
 
-<p>ESMAP, under the SE4ALL initiative, in consultation with multiple development partners, has developed the <a href="https://www.esmap.org/node/55526">Multi-Tier Framework</a> (MTF) to monitor and evaluate access to energy following a multidimensional methodology.</p>
 
-<h2 id="a-multidimensional-definition-of-access-to-energy">A multidimensional, definition of access to energy</h2>
+<span class="c"># initialize the institution</span>
+<span class="n">mfi</span> <span class="o">=</span> <span class="n">hedera</span><span class="o">.</span><span class="n">mfi</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="c"># read database</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">mfi</span><span class="o">.</span><span class="n">read_survey</span><span class="p">(</span><span class="n">odk_data_dir</span> <span class="o">+</span> <span class="n">odk_folder_dir</span><span class="o">+</span><span class="n">odk_data_name</span><span class="p">,</span>
+                           <span class="n">delimiter</span><span class="o">=</span><span class="s">'-'</span><span class="p">)</span>
 
-<p>The MTF redefines the access to energy from traditional binary accounting (<em>connected or not connected, cooking with firewood or not</em>) to a multidimensional definition such as <strong>the ability to take advantage of adequate energy, available when necessary, reliable, good quality, convenient, affordable, legal, healthy and safe for all required energy services</strong>.</p>
 
-<p>That is, having an electrical connection does not necessarily mean having access to electricity according to the new definition, but it also takes into account other aspects, such as, for example, reliability, affordability, among other attributes. Thus, access to energy is measured in the spectrum of levels, from Level 0 (<em>tier 0</em>) (without access) to Level 5 (<em>tier5</em>) (the highest level of access).</p>
 
-<h3 id="ranking-matrix-to-evaluate-household-energy-access">Ranking matrix to evaluate household energy access</h3>
+<span class="n">mfi</span><span class="o">.</span><span class="n">HH</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">households</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
 
-<p>Access to electricity is measured based on standards (attributes) of multiple levels, independent from the energy technology. The successive thresholds of these attributes that are associated with the supply, allow a greater use of electrical appliances. The relevant attributes to evaluate the electricity of the households estimated by the MTF methodology are:</p>
+</div>
 
-<ul>
-  <li><strong>Capacity:</strong> What appliances can the household use?</li>
-  <li><strong>Duration (including daily supply and night supply):</strong> Is the power source available when the household needs it?</li>
-  <li><strong>Reliability:</strong> Is electricity service interrupted frequently?</li>
-  <li><strong>Quality:</strong> Does the fluctuation of the voltage damage the appliances?</li>
-  <li><strong>Affordability:</strong> Can the household afford to buy the minimum amount of electricity?</li>
-  <li><strong>Legality:</strong> Is the service provided formally or informally?</li>
-  <li><strong>Health and Safety:</strong> Is it safe to use electricity service or are the household members risking your health if you use the service?</li>
-</ul>
+<h3 id="mtf-index-access-to-electricity">MTF Index (Access to electricity)</h3>
 
-<p>Each attribute is evaluated separately and the general level for household access to electricity is calculated by applying the lowest level obtained in any of the attributes. That is, the attribute with the lowest rating determines the household energy access level (tier).</p>
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">mfi</span><span class="o">.</span><span class="n">tier_pie</span><span class="p">(</span><span class="s">'C_Index'</span><span class="p">)</span>
 
-<p>
-        <img src="./images/MTF-electricitysupply.png" alt="image" style="width:80.0%" />
- </p>
+</code></pre></div>    </div>
+  </div>
 
-<h3 id="ranking-matrix-to-evaluate--access-to-energy-services">Ranking matrix to evaluate  access to energy services</h3>
+  <div class="output_wrapper">
+    <div class="output_subarea">
 
-<p>The MTF methodology defines a separate framework for measuring access to electricity services. A gradual improvement of the electricity supply allows greater and better access to different appliances for different needs. Thus, in a second matrix that measures access to electricity services, the categorization is according to the type of appliances used in the home. A household may obtain ratings at different levels through access to electricity supply and access to electricity services, reflecting the availability of appliances despite poor supply or inability to purchase appliances (or high consumption) of electricity) despite the adequate supply.</p>
+      <p class="output_png"><img src="images/elect_3_0.png" alt="png" /></p>
 
-<p>
-        <img src="./images/MTF-electricityservices.png" alt="image" style="width:80.0%" />
- </p>
+    </div>
+  </div>
+</div>
 
-<h3 id="ranking-matrix-to-evaluate-access-to-modern-cooking-solutions">Ranking matrix to evaluate access to modern cooking solutions</h3>
+<h2 id="electricity-sources-1">Electricity sources</h2>
+<h3 id="primary-sources">Primary sources</h3>
 
-<p>The multi-level framework for measuring access to cooking energy is based on seven attributes:
-(i) health (based on indoor air pollution), (ii) convenience (based on fuel collection time and stove preparation time), (iii) safety, (iv) affordability (including spending on stoves and fuel), (v) efficiency, (vi) quality and (vii) availability. In this methodology, a cooking system refers to the combination of a stove and a type of cooking fuel. A cooking system includes all the cooking solutions that are used, as well as the place of cooking and ventilation.</p>
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mfi</span><span class="o">.</span><span class="n">electricity_sources_summary</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
 
-<p>Data on access to cooking energy such as ventilation, the quality of the fuel used, convenience, availability and affordability can be collected through household surveys. Other parameters, such as indoor air quality and efficiency, can be better measured through supply side data based on laboratory tests or estimation based on mathematical models.</p>
+  <div class="output_wrapper">
+    <div class="output_subarea">
 
-<ul>
-  <li><strong>Affordability:</strong> Can the household pay for both the kitchen and the fuel?</li>
-  <li><strong>Convenience:</strong> How long does it take the household to get and prepare fuel and cooking before a person in the household can cook?</li>
-  <li><strong>Availability:</strong> Is the fuel available when the home needs it to cook?</li>
-  <li><strong>Quality:</strong> Does the quality of the fuel affect cooking?</li>
-  <li><strong>Security:</strong> Is it safe to use the kitchen or is the person exposed to possible accidents? Have accidents occurred in the past due to the use of fuel?</li>
-</ul>
+      <p class="output_png"><img src="images/elect_5_0.png" alt="png" /></p>
 
-<p>The standards for the measurement of multiple attributes to describe access to cooking systems of households are summarized in the following table. <strong>The lowest level among all the attributes determines the general access to the kitchen level for the home</strong>.</p>
+    </div>
+  </div>
+</div>
 
-<p>
-        <img src="./images/MTF-cookingsolutions.png" alt="image" style="width:80.0%" />
- </p>
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">### Primary and Secondary</span>
+</code></pre></div>    </div>
+  </div>
+
+</div>
+
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">collection_overview</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">overview</span><span class="p">(</span><span class="n">mfi</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span><span class="n">mfi</span><span class="p">)</span>
+<span class="n">odk</span><span class="o">.</span><span class="n">plot_electricity_sources</span><span class="p">(</span><span class="n">collection_overview</span><span class="p">,</span><span class="s">'en'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/elect_7_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="mtf-electricity-index-vs-primary-source">MTF Electricity Index vs. Primary Source</h2>
+
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mfi</span><span class="o">.</span><span class="n">stacked_tier_per_category</span><span class="p">(</span><span class="s">'E_Index'</span><span class="p">,</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">powerSources</span><span class="p">,</span>
+                              <span class="s">'primary_electricity_source'</span><span class="p">,</span>
+                              <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">powerSources</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/elect_9_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/intro">
-      〈 <span class="u-margin-right-tiny"></span> Introduction
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/gps">
+      〈 <span class="u-margin-right-tiny"></span> Map & Overview
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/gps">
-      Map & Overview <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/cooking">
+      Access to Modern Cooking Solutions <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
