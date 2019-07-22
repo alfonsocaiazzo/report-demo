@@ -2,3 +2,8 @@
 .left {
     margin-left: 0px;
 }
+body, p, ul, li, div.rendered_html { 
+    color: black;
+    font-family: 'Tw Cen MT';
+    font-size: 12pt;
+}

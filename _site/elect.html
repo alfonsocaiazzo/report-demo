@@ -29,9 +29,9 @@
   "headline":
     "Access to electricity",
   "datePublished":
-    "2019-07-10T04:45:44-05:00",
+    "2019-07-22T03:29:03-05:00",
   "dateModified":
-    "2019-07-10T04:45:44-05:00",
+    "2019-07-22T03:29:03-05:00",
   "description":
     "Electricity sources",
   "author": {
@@ -666,7 +666,8 @@ initFunction(initQuery);
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
 <span class="n">mfi</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">(</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">attributes_electricity</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span>
               <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">e_attributes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
@@ -688,7 +689,8 @@ initFunction(initQuery);
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
 <span class="n">mfi</span><span class="o">.</span><span class="n">tier_pie</span><span class="p">(</span><span class="s">'E_Index'</span><span class="p">)</span>
 
 </code></pre></div>    </div>
@@ -721,18 +723,11 @@ initFunction(initQuery);
   </div>
 </div>
 
-<div class="cell code_cell">
-  <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">### Primary and Secondary</span>
-</code></pre></div>    </div>
-  </div>
-
-</div>
+<h3 id="secondary-sources">Secondary sources</h3>
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">collection_overview</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">overview</span><span class="p">(</span><span class="n">mfi</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span><span class="n">mfi</span><span class="p">)</span>
-<span class="n">odk</span><span class="o">.</span><span class="n">plot_electricity_sources</span><span class="p">(</span><span class="n">collection_overview</span><span class="p">,</span><span class="s">'en'</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mfi</span><span class="o">.</span><span class="n">electricity_sources_summary</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">primary</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">secondary</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div>    </div>
   </div>
 
@@ -745,11 +740,33 @@ initFunction(initQuery);
   </div>
 </div>
 
+<h3 id="primary-and-secondary">Primary and Secondary</h3>
+
+<div class="cell code_cell">
+  <div class="input_area hidecode">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
+<span class="n">collection_overview</span> <span class="o">=</span> <span class="n">odk</span><span class="o">.</span><span class="n">overview</span><span class="p">(</span><span class="n">mfi</span><span class="o">.</span><span class="n">HH</span><span class="p">,</span><span class="n">mfi</span><span class="p">)</span>
+<span class="n">odk</span><span class="o">.</span><span class="n">plot_electricity_sources</span><span class="p">(</span><span class="n">collection_overview</span><span class="p">,</span><span class="s">'en'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+
+      <p class="output_png"><img src="images/elect_11_0.png" alt="png" /></p>
+
+    </div>
+  </div>
+</div>
+
 <h2 id="mtf-electricity-index-vs-primary-source">MTF Electricity Index vs. Primary Source</h2>
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mfi</span><span class="o">.</span><span class="n">stacked_tier_per_category</span><span class="p">(</span><span class="s">'E_Index'</span><span class="p">,</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">powerSources</span><span class="p">,</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">24</span><span class="p">})</span>
+<span class="n">mfi</span><span class="o">.</span><span class="n">stacked_tier_per_category</span><span class="p">(</span><span class="s">'E_Index'</span><span class="p">,</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">powerSources</span><span class="p">,</span>
                               <span class="s">'primary_electricity_source'</span><span class="p">,</span>
                               <span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">powerSources</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div>    </div>
@@ -758,7 +775,7 @@ initFunction(initQuery);
   <div class="output_wrapper">
     <div class="output_subarea">
 
-      <p class="output_png"><img src="images/elect_11_0.png" alt="png" /></p>
+      <p class="output_png"><img src="images/elect_13_0.png" alt="png" /></p>
 
     </div>
   </div>

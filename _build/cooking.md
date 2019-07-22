@@ -59,6 +59,8 @@ mfi.HH = odk.households(data)
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 18})
 mfi.cooking_fuels_summary(legend=True)
 
 ```
@@ -79,6 +81,8 @@ mfi.cooking_fuels_summary(legend=True)
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 18})
 mfi.tier_barh(hedera.keys().attributes_cooking[0:4],hedera.names('en').c_attributes[0:4],legend=True)
 ```
 </div>
@@ -99,6 +103,8 @@ The MTF Index, for each household, is given by the minimum ranking among all att
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 18})
 mfi.tier_pie('C_Index')
 ```
 </div>

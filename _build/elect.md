@@ -56,7 +56,8 @@ mfi.HH = odk.households(data)
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
-
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 18})
 mfi.tier_barh(hedera.keys().attributes_electricity[0:8],
               hedera.names('en').e_attributes[0:8],legend=True)
 
@@ -80,7 +81,8 @@ The MTF Index is given, for each household, by the minimum ranking among all con
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
-
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 18})
 mfi.tier_pie('E_Index')
 
 ```
@@ -116,20 +118,12 @@ mfi.electricity_sources_summary(legend=True)
 </div>
 </div>
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area hidecode" markdown="1">
-```python
-### Primary and Secondary
-```
-</div>
-
-</div>
+### Secondary sources
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
-collection_overview = odk.overview(mfi.HH,mfi)
-odk.plot_electricity_sources(collection_overview,'en')
+mfi.electricity_sources_summary(legend=True,primary=False,secondary=True)
 ```
 </div>
 
@@ -143,11 +137,35 @@ odk.plot_electricity_sources(collection_overview,'en')
 </div>
 </div>
 
+### Primary and Secondary
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area hidecode" markdown="1">
+```python
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 18})
+collection_overview = odk.overview(mfi.HH,mfi)
+odk.plot_electricity_sources(collection_overview,'en')
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+{:.output_png}
+![png](images/elect_11_0.png)
+
+</div>
+</div>
+</div>
+
 ## MTF Electricity Index vs. Primary Source
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area hidecode" markdown="1">
 ```python
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 24})
 mfi.stacked_tier_per_category('E_Index',hedera.keys().powerSources,
                               'primary_electricity_source',
                               hedera.names('en').powerSources,legend=True)
@@ -158,7 +176,7 @@ mfi.stacked_tier_per_category('E_Index',hedera.keys().powerSources,
 <div class="output_subarea" markdown="1">
 
 {:.output_png}
-![png](images/elect_11_0.png)
+![png](images/elect_13_0.png)
 
 </div>
 </div>

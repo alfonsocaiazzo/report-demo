@@ -29,9 +29,9 @@
   "headline":
     "Access to Modern Cooking Solutions",
   "datePublished":
-    "2019-07-10T04:45:44-05:00",
+    "2019-07-22T03:29:03-05:00",
   "dateModified":
-    "2019-07-10T04:45:44-05:00",
+    "2019-07-22T03:29:03-05:00",
   "description":
     "Cooking solutions",
   "author": {
@@ -668,7 +668,9 @@ initFunction(initQuery);
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mfi</span><span class="o">.</span><span class="n">cooking_fuels_summary</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
+<span class="n">mfi</span><span class="o">.</span><span class="n">cooking_fuels_summary</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
@@ -686,7 +688,9 @@ initFunction(initQuery);
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mfi</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">(</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">attributes_cooking</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span><span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">c_attributes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
+<span class="n">mfi</span><span class="o">.</span><span class="n">tier_barh</span><span class="p">(</span><span class="n">hedera</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">attributes_cooking</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span><span class="n">hedera</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="s">'en'</span><span class="p">)</span><span class="o">.</span><span class="n">c_attributes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span><span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div>    </div>
   </div>
 
@@ -704,7 +708,9 @@ initFunction(initQuery);
 
 <div class="cell code_cell">
   <div class="input_area hidecode">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mfi</span><span class="o">.</span><span class="n">tier_pie</span><span class="p">(</span><span class="s">'C_Index'</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">'font.size'</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
+<span class="n">mfi</span><span class="o">.</span><span class="n">tier_pie</span><span class="p">(</span><span class="s">'C_Index'</span><span class="p">)</span>
 </code></pre></div>    </div>
   </div>
 
